@@ -46,9 +46,9 @@ public static void main(String[] args) {
 	
 	JButton russiaButton = new JButton("RUSSIA");
 	russiaButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Russia button with (width, height)
-	frame.add(panelTwo, BorderLayout.EAST); //adds the panel and centers it
+	frame.add(panelTwo); //adds the panel and centers it
 	russiaButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); //sets the font for the Russia Button
-	panelTwo.add(russiaButton); //adds the Russia button to the panel
+	panelTwo.add(russiaButton, BorderLayout.CENTER); //adds the Russia button to the panel
 	
 	
 	frame.pack(); //fits the frame to the size of the two buttons
