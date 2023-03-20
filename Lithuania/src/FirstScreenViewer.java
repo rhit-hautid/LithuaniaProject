@@ -39,16 +39,16 @@ public static void main(String[] args) {
 	
 	
 	JButton germanyButton = new JButton("GERMANY");
-	germanyButton.setPreferredSize(new Dimension(200, 100));
+	germanyButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
 	frame.add(panel, BorderLayout.WEST); //adds the panel and centers it
 	germanyButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button 
-	panel.add(germanyButton);
+	panel.add(germanyButton); //adds the Germany button to the panel
 	
 	JButton russiaButton = new JButton("RUSSIA");
-	russiaButton.setPreferredSize(new Dimension(200, 100));
+	russiaButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Russia button with (width, height)
 	frame.add(panelTwo, BorderLayout.EAST); //adds the panel and centers it
 	russiaButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); //sets the font for the Russia Button
-	panelTwo.add(russiaButton);
+	panelTwo.add(russiaButton); //adds the Russia button to the panel
 	
 	
 	frame.pack(); //fits the frame to the size of the two buttons
