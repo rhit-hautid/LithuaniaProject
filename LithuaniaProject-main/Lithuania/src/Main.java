@@ -29,21 +29,21 @@ public class Main {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
 		
-
-        try {
-            // Load the JPG image file
-            ImageIcon inputFile = new ImageIcon("file:///C:/Users/hautid/git/LithuaniaProject/LithuaniaProject-main/Images/MySquare.PNG");
-            Image image = inputFile.getImage();
-
-            // Display the image width and height
-//            System.out.println("Image width: " + image.getWidth());
-//            System.out.println("Image height: " + image.getHeight());
-           // frame.add(image);
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
-
+//
+//        try {
+//            // Load the JPG image file
+//            ImageIcon inputFile = new ImageIcon("file:///C:/Users/hautid/git/LithuaniaProject/LithuaniaProject-main/Images/MySquare.PNG");
+//            Image image = inputFile.getImage();
+//
+//            // Display the image width and height
+////            System.out.println("Image width: " + image.getWidth());
+////            System.out.println("Image height: " + image.getHeight());
+//           // frame.add(image);
+//        } catch (IOException e) {
+//            System.out.println("Error: " + e.getMessage());
+//        }
+//    }
+// new comment
 	
 		
 		
