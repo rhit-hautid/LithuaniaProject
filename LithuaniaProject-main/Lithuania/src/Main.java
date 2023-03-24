@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -29,8 +30,7 @@ public class Main {
 
 		JFrame frame = new JFrame(); // creates a new frame
 		JPanel panel = new JPanel(); // creates a new panel
-		JPanel panelTwo = new JPanel(); // creates a new panel
-
+		panel.setPreferredSize(FIRST_SCREEN_SIZE);
 		frame.setSize(FIRST_SCREEN_SIZE);
 		frame.setTitle("Home");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -38,7 +38,7 @@ public class Main {
 		// frame.pack(); //fits the frame to the size of the two buttons
 		frame.setVisible(true);
 
-		new Buttons(frame, panel, panelTwo);
+		new Buttons(frame, panel);
 
 	}
 }

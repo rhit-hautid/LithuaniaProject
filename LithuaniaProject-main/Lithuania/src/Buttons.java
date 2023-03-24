@@ -1,4 +1,5 @@
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 
@@ -19,12 +20,12 @@ public class Buttons extends Main {
 	JPanel panel;
 	JPanel panel2;
 
-	public Buttons(JFrame mainFrame, JPanel mainPanel, JPanel mainPanel2) {
+	public Buttons(JFrame mainFrame, JPanel mainPanel) {
 
 		this.frame = mainFrame;
 		this.panel = mainPanel;
-		this.panel2 = mainPanel2;
 
+		
 		// code to put an image on a window
 		ImageIcon img = null;
 		img = new ImageIcon("Lithuania/src/MySquare.PNG"); // all images should have the
@@ -129,6 +130,9 @@ public class Buttons extends Main {
 																			// on
 																			// coordinates
 		panel.add(searchButton); // adds the Germany button to the panel
+		
+		Color myBlue = new Color(231, 248, 252); // Color blue
+		panel.setBackground(myBlue);
 		frame.setVisible(true);
 	}
 
