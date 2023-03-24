@@ -9,6 +9,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/*
+ * @author Isabel Haut
+ */
+
 public class Buttons extends Main {
 
 	JFrame frame;

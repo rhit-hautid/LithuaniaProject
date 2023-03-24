@@ -18,6 +18,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+/*
+ * @author Isabel Haut 
+ */
 public class Main {
 
 	public static final Dimension FIRST_SCREEN_SIZE = new Dimension(1500, 1000);
