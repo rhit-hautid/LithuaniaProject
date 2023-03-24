@@ -132,7 +132,7 @@ public class Buttons extends Main {
 		panel.add(searchButton); // adds the Germany button to the panel
 		
 		Color myBlue = new Color(231, 248, 252); // Color blue
-		panel.setBackground(myBlue);
+		panel.setBackground(myBlue); //sets panel to my custom color 
 		frame.setVisible(true);
 	}
 
