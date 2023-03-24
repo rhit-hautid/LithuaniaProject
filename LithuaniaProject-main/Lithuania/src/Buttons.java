@@ -25,20 +25,19 @@ public class Buttons extends Main {
 		this.frame = mainFrame;
 		this.panel = mainPanel;
 
-		
 		// code to put an image on a window
-		ImageIcon img = null;
-		img = new ImageIcon("Lithuania/src/MySquare.PNG"); // all images should have the
-															// Lithuania/src/FileNamePNG
+		ImageIcon img = new ImageIcon("Lithuania/src/MySquare.PNG"); // all images should have the
+		// Lithuania/src/FileNamePNG
 		JLabel jlPic = new JLabel(img);
 
 		Dimension size = jlPic.getPreferredSize();
-		jlPic.setBounds(1000, 300, size.width, size.height); // will let you place
+
+		jlPic.setBounds(800, 1000, size.width, size.height); // will let you place
 																// image anywhere you
 																// want based on
 																// coordinates
-		panel.add(jlPic, BorderLayout.CENTER); // add image to the panel
 
+		panel.add(jlPic); // add image to the panel
 		String[] choices = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of down
 																										// button
 																										// options
@@ -130,9 +129,9 @@ public class Buttons extends Main {
 																			// on
 																			// coordinates
 		panel.add(searchButton); // adds the Germany button to the panel
-		
+
 		Color myBlue = new Color(231, 248, 252); // Color blue
-		panel.setBackground(myBlue); //sets panel to my custom color 
+		panel.setBackground(myBlue); // sets panel to my custom color
 		frame.setVisible(true);
 	}
 
