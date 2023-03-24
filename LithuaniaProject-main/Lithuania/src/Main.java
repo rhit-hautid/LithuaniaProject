@@ -38,7 +38,7 @@ public class Main {
 	
 		
 		
-		
+		//code to put an image on a window
 		ImageIcon img = null;
 		try {
 			img = new ImageIcon(new URL("file:///C:/Users/hautid/git/LithuaniaProject/LithuaniaProject-main/Images/MySquare.PNG"));
@@ -47,10 +47,12 @@ public class Main {
 		}
 		JLabel jlPic = new JLabel(img);
 
-		jlPic.setPreferredSize(new Dimension(300,100));
-		Dimension size = jlPic.getPreferredSize();
-		jlPic.setBounds (1000, 300, size.width, size.height); //will let you place button anywhere you want based on coordinates 
-		panel.add(jlPic, BorderLayout.CENTER);
+		Dimension size = jlPic.getPreferredSize(); 
+		jlPic.setBounds (1000, 300, size.width, size.height); //will let you place image anywhere you want based on coordinates 
+		panel.add(jlPic, BorderLayout.CENTER); //add image to the panel
+		
+		
+		
 		
 		
 		
