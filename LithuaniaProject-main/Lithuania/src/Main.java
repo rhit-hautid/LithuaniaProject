@@ -13,6 +13,7 @@ import java.awt.image.BufferedImage;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -49,6 +50,16 @@ public class Main {
 		
 		
 		
+		String[] choices = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"}; //drop down button with options 
+
+	    final JComboBox<String> cb = new JComboBox<String>(choices);
+
+	    cb.setVisible(true);
+	    panel.add(cb);
+
+// this is an optional OK button that can be implemented but i think its redundant as we will have a submit button
+//	    JButton btn = new JButton("OK"); 
+//	    panel.add(btn);
 		
 		
 		
