@@ -54,7 +54,7 @@ public class Main {
 
 	    final JComboBox<String> dropDownButton = new JComboBox<String>(choices); //creates a new drop down button
 	   
-	    dropDownButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    dropDownButton.setPreferredSize(new Dimension(200, 50)); //sets the size of the Germany button with (width, height)
 	    Dimension sizeTwo = dropDownButton.getPreferredSize();
 	    dropDownButton.setBounds (500, 300, sizeTwo.width, sizeTwo.height); //will let you place button anywhere you want based on coordinates 
 	    dropDownButton.setVisible(true); 
@@ -69,9 +69,9 @@ public class Main {
 
 	    final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo); //creates a new drop down button
 
-	    dropDownButtonTwo.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    dropDownButtonTwo.setPreferredSize(new Dimension(200, 50)); //sets the size of the Germany button with (width, height)
 	    Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
-	    dropDownButtonTwo.setBounds (100, 300, sizeThree.width, sizeThree.height); //will let you place button anywhere you want based on coordinates 
+	    dropDownButtonTwo.setBounds (100, 400, sizeThree.width, sizeThree.height); //will let you place button anywhere you want based on coordinates 
 	    dropDownButtonTwo.setVisible(true); 
 	    panel.add(dropDownButtonTwo); //adds the drop down button to the panel
 	    
@@ -85,9 +85,9 @@ public class Main {
 
 	    final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree); //creates a new drop down button
 
-	    dropDownButtonThree.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    dropDownButtonThree.setPreferredSize(new Dimension(200, 50)); //sets the size of the Germany button with (width, height)
 	    Dimension sizeFour = dropDownButtonThree.getPreferredSize();
-	    dropDownButtonThree.setBounds (800, 300, sizeFour.width, sizeFour.height); //will let you place button anywhere you want based on coordinates 
+	    dropDownButtonThree.setBounds (800, 500, sizeFour.width, sizeFour.height); //will let you place button anywhere you want based on coordinates 
 	    dropDownButtonThree.setVisible(true); 
 	    panel.add(dropDownButtonThree); //adds the drop down button to the panel
 	    
@@ -99,11 +99,11 @@ public class Main {
 		
 		
 		JButton searchButton = new JButton("Search");
-		searchButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+		searchButton.setPreferredSize(new Dimension(200, 50)); //sets the size of the Germany button with (width, height)
 		frame.add(panel, BorderLayout.NORTH); //adds the panel and centers it
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button 
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds (500, 300, sizeFive.width, sizeFive.height); //will let you place button anywhere you want based on coordinates 
+		searchButton.setBounds (500, 800, sizeFive.width, sizeFive.height); //will let you place button anywhere you want based on coordinates 
 		panel.add(searchButton); //adds the Germany button to the panel
 	
 		//frame.pack(); //fits the frame to the size of the two buttons
