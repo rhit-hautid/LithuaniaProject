@@ -40,11 +40,7 @@ public class Main {
 		
 		//code to put an image on a window
 		ImageIcon img = null;
-		try {
-			img = new ImageIcon(new URL("file:///C:/Users/hautid/git/LithuaniaProject/LithuaniaProject-main/Images/MySquare.PNG"));
-		} catch (MalformedURLException e) {
-			e.printStackTrace();
-		}
+		img = new ImageIcon("Lithuania/src/MySquare.PNG"); //all images should have the Lithuania/src/FileNamePNG
 		JLabel jlPic = new JLabel(img);
 
 		Dimension size = jlPic.getPreferredSize(); 
