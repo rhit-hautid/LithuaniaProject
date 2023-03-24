@@ -50,38 +50,63 @@ public class Main {
 		
 		
 		
-		String[] choices = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"}; //drop down button with options 
+		String[] choices = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"}; //list of down button  options 
 
-	    final JComboBox<String> cb = new JComboBox<String>(choices);
+	    final JComboBox<String> dropDownButton = new JComboBox<String>(choices); //creates a new drop down button
+	   
+	    dropDownButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    Dimension sizeTwo = dropDownButton.getPreferredSize();
+	    dropDownButton.setBounds (500, 300, sizeTwo.width, sizeTwo.height); //will let you place button anywhere you want based on coordinates 
+	    dropDownButton.setVisible(true); 
+	    panel.add(dropDownButton); //adds the drop down button to the 
 
-	    cb.setVisible(true);
-	    panel.add(cb);
+// this is an optional OK button that can be implemented but i think its redundant as we will have a search button
+//	    JButton btn = new JButton("OK"); 
+//	    panel.add(btn);
+	    
+	    
+	    String[] choicesTwo = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"}; //list of down button  options 
 
-// this is an optional OK button that can be implemented but i think its redundant as we will have a submit button
+	    final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo); //creates a new drop down button
+
+	    dropDownButtonTwo.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
+	    dropDownButtonTwo.setBounds (100, 300, sizeThree.width, sizeThree.height); //will let you place button anywhere you want based on coordinates 
+	    dropDownButtonTwo.setVisible(true); 
+	    panel.add(dropDownButtonTwo); //adds the drop down button to the panel
+	    
+ // this is an optional OK button that can be implemented but i think its redundant as we will have a search button
+//	    JButton btn = new JButton("OK"); 
+//	    panel.add(btn);
+	    
+	    
+	    
+	    String[] choicesThree = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"}; //list of down button  options 
+
+	    final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree); //creates a new drop down button
+
+	    dropDownButtonThree.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+	    Dimension sizeFour = dropDownButtonThree.getPreferredSize();
+	    dropDownButtonThree.setBounds (800, 300, sizeFour.width, sizeFour.height); //will let you place button anywhere you want based on coordinates 
+	    dropDownButtonThree.setVisible(true); 
+	    panel.add(dropDownButtonThree); //adds the drop down button to the panel
+	    
+
+// this is an optional OK button that can be implemented but i think its redundant as we will have a search button
 //	    JButton btn = new JButton("OK"); 
 //	    panel.add(btn);
 		
 		
 		
-		JButton germanyButton = new JButton("GERMANY");
-		germanyButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
+		JButton searchButton = new JButton("Search");
+		searchButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Germany button with (width, height)
 		frame.add(panel, BorderLayout.NORTH); //adds the panel and centers it
-		germanyButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button 
-		Dimension sizeTwo = germanyButton.getPreferredSize();
-		germanyButton.setBounds (500, 300, sizeTwo.width, sizeTwo.height); //will let you place button anywhere you want based on coordinates 
-		panel.add(germanyButton); //adds the Germany button to the panel
-		
-		JButton russiaButton = new JButton("RUSSIA");
-		russiaButton.setPreferredSize(new Dimension(200, 100)); //sets the size of the Russia button with (width, height)
-		frame.add(panelTwo); //adds the panel and centers it
-		russiaButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); //sets the font for the Russia Button
-		Dimension sizeThree = russiaButton.getPreferredSize();
-		russiaButton.setBounds (1000, 300, sizeThree.width, sizeThree.height); //will let you place button anywhere you want based on coordinates 
-		panelTwo.add(russiaButton, BorderLayout.SOUTH); //adds the Russia button to the panel
-		
-		frame.setVisible(true);
-		
+		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button 
+		Dimension sizeFive = searchButton.getPreferredSize();
+		searchButton.setBounds (500, 300, sizeFive.width, sizeFive.height); //will let you place button anywhere you want based on coordinates 
+		panel.add(searchButton); //adds the Germany button to the panel
+	
 		//frame.pack(); //fits the frame to the size of the two buttons
-		
+		frame.setVisible(true);
 	}
 }
