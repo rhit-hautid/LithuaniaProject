@@ -38,7 +38,7 @@ public class Main {
 		// frame.pack(); //fits the frame to the size of the two buttons
 		frame.setVisible(true);
 
-		new ImageButtons(frame, panel);
+		new HomePage(frame, panel);
 
 	}
 }

@@ -14,13 +14,13 @@ import javax.swing.JPanel;
  * @author Isabel Haut
  */
 
-public class ImageButtons extends Main {
+public class HomePage extends Main {
 
 	JFrame frame;
 	JPanel panel;
 	JPanel panel2;
 
-	public ImageButtons(JFrame mainFrame, JPanel mainPanel) {
+	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
 		this.frame = mainFrame;
 		this.panel = mainPanel;
