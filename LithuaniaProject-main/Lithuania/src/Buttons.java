@@ -26,7 +26,7 @@ public class Buttons extends Main {
 		this.panel = mainPanel;
 
 		// code to put an image on a window
-		ImageIcon img = new ImageIcon("Lithuania/src/MySquare.PNG"); // all images should have the
+		ImageIcon img = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
 		// Lithuania/src/FileNamePNG
 		JLabel jlPic = new JLabel(img);
 
