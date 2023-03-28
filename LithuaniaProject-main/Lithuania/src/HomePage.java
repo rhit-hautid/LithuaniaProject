@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -129,10 +130,14 @@ public class HomePage extends Main {
 																			// on
 																			// coordinates
 		panel.add(searchButton); // adds the Germany button to the panel
-
 		Color myBlue = new Color(231, 248, 252); // Color blue
 		panel.setBackground(myBlue); // sets panel to my custom color
 		frame.setVisible(true);
+
+	}
+
+	public void actionPerformed(ActionEvent e) {
+		new SecondFrame();
 	}
 
 }
