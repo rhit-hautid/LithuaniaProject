@@ -35,8 +35,10 @@ public class HomePage extends Main{
 		JLabel jlPic = new JLabel(img);
 
 		Dimension size = jlPic.getPreferredSize();
+		
+		
 
-		jlPic.setBounds(800, 1000, size.width, size.height); // will let you place
+		jlPic.setBounds(400, 1000, size.width, size.height); // will let you place
 																// image anywhere you
 																// want based on
 																// coordinates
@@ -51,7 +53,7 @@ public class HomePage extends Main{
 		dropDownButton.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
-		dropDownButton.setBounds(500, 300, sizeTwo.width, sizeTwo.height); // will let you place
+		dropDownButton.setBounds(100, 300, sizeTwo.width, sizeTwo.height); // will let you place
 																			// button anywhere you
 																			// want based on
 																			// coordinates
@@ -121,7 +123,7 @@ public class HomePage extends Main{
 		frame.add(panel, BorderLayout.NORTH); // adds the panel and centers it
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds(500, 800, sizeFive.width, sizeFive.height); // will
+		searchButton.setBounds(100, 100, sizeFive.width, sizeFive.height); // will
 																			// let
 																			// you
 																			// place
