@@ -137,7 +137,7 @@ public class HomePage extends Main {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		new SecondFrame();
+		//new SecondFrame();
 	}
 
 }
