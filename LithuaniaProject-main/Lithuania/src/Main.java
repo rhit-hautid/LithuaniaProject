@@ -34,6 +34,9 @@ public class Main {
 		frame.setSize(FIRST_SCREEN_SIZE);
 		frame.setTitle("Home");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
 
 		// frame.pack(); //fits the frame to the size of the two buttons
 		frame.setVisible(true);

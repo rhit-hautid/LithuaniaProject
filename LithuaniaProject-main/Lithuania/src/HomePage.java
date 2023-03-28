@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -11,15 +12,17 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
+
 /*
  * @author Isabel Haut
  */
 
-public class HomePage extends Main {
+public class HomePage extends Main{
 
 	JFrame frame;
 	JPanel panel;
 	JPanel panel2;
+	JButton searchButton = new JButton("Search");
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -108,7 +111,7 @@ public class HomePage extends Main {
 //	    JButton btn = new JButton("OK"); 
 //	    panel.add(btn);
 
-		JButton searchButton = new JButton("Search");
+		searchButton.addActionListener(new ButtonListener1());
 		searchButton.setPreferredSize(new Dimension(200, 50)); // sets the size
 																// of the
 																// Germany
@@ -133,11 +136,30 @@ public class HomePage extends Main {
 		Color myBlue = new Color(231, 248, 252); // Color blue
 		panel.setBackground(myBlue); // sets panel to my custom color
 		frame.setVisible(true);
-
+		
 	}
 
-	public void actionPerformed(ActionEvent e) {
-		//new SecondFrame();
+	public JFrame getFrame() {
+		return frame;
 	}
 
+	public void setFrame(JFrame frame) {
+		this.frame = frame;
+	}
+	
+	public class ButtonListener1 implements ActionListener{
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
+			if(e.getSource() == searchButton) {
+				System.out.println("Test");
+				JFrame frameSelection = new JFrame("frameSelection");
+				frameSelection.setSize(FIRST_SCREEN_SIZE);
+				frameSelection.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				frameSelection.setVisible(true);// creates a new frame;
+			//new SecondFrame();
+			}
+		}
+
+	}
 }
