@@ -148,7 +148,7 @@ public class HomePage extends Main {
 		JLabel labelTwo = new JLabel("My label");
 		labelTwo.setPreferredSize(new Dimension(600, 100)); 
 		Dimension sizeEight = labelTwo.getPreferredSize();
-		labelTwo.setText("Come here to explore the beautiful castles of Lithuiania");  //text can be changed just inserted for layout
+		labelTwo.setText("Come here to explore the beautiful castles of Lithuania");  //text can be changed just inserted for layout
 		panel.add(labelTwo);
 		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15)); // sets the font for the Germany Button
 		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
