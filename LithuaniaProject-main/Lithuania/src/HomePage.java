@@ -132,7 +132,30 @@ public class HomePage extends Main {
 		// on
 		// coordinates
 		panel.add(searchButton); // adds the button to the panel
+		
+		
+		
+		
+		JLabel label = new JLabel("My label");
+		label.setPreferredSize(new Dimension(400, 70)); 
+		Dimension sizeSeven = label.getPreferredSize();
+		label.setText("Find A Place To Visit");
+		panel.add(label);
+		label.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
+		label.setBounds(305 + insets.left, 125 + insets.bottom, sizeSeven.width, sizeSeven.height);
+		
+		
+		JLabel labelTwo = new JLabel("My label");
+		labelTwo.setPreferredSize(new Dimension(600, 100)); 
+		Dimension sizeEight = labelTwo.getPreferredSize();
+		labelTwo.setText("Come here to explore the beautiful castles of Lithuiania");  //text can be changed just inserted for layout
+		panel.add(labelTwo);
+		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15)); // sets the font for the Germany Button
+		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
+		
 
+
+	
 		// code to put an image on a window
 		ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
 		// Lithuania/src/FileNamePNG
