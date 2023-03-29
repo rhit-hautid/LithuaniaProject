@@ -42,10 +42,10 @@ public class HomePage extends Main {
 
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices); // creates a new drop down button
 
-		dropDownButton.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with (width,
+		dropDownButton.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
-		dropDownButton.setBounds(400 + insets.left, 100 + insets.bottom, sizeTwo.width, sizeTwo.height); // will let
+		dropDownButton.setBounds(255 + insets.left, 275 + insets.bottom, sizeTwo.width, sizeTwo.height); // will let
 																											// you place
 		// button anywhere you
 		// want based on
@@ -65,10 +65,10 @@ public class HomePage extends Main {
 
 		final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo); // creates a new drop down button
 
-		dropDownButtonTwo.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with (width,
+		dropDownButtonTwo.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
-		dropDownButtonTwo.setBounds(400 + insets.left, 200 + insets.bottom, sizeThree.width, sizeThree.height); // will
+		dropDownButtonTwo.setBounds(255 + insets.left, 375 + insets.bottom, sizeThree.width, sizeThree.height); // will
 																													// let
 																													// you
 		// place button
@@ -91,11 +91,11 @@ public class HomePage extends Main {
 		final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree); // creates a new drop down
 																							// button
 
-		dropDownButtonThree.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with
+		dropDownButtonThree.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with
 																		// (width,
 																		// height)
 		Dimension sizeFour = dropDownButtonThree.getPreferredSize();
-		dropDownButtonThree.setBounds(400 + insets.left, 300 + insets.bottom, sizeFour.width, sizeFour.height); // will
+		dropDownButtonThree.setBounds(255 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height); // will
 																													// let
 																													// you
 		// place button
@@ -111,7 +111,7 @@ public class HomePage extends Main {
 //	    panel.add(btn);
 
 		searchButton.addActionListener(new ButtonListener1());
-		searchButton.setPreferredSize(new Dimension(200, 50)); // sets the size
+		searchButton.setPreferredSize(new Dimension(400, 70)); // sets the size
 																// of the
 																// Germany
 																// button with
@@ -120,7 +120,7 @@ public class HomePage extends Main {
 		frame.add(panel, BorderLayout.NORTH); // adds the panel and centers it
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds(400 + insets.left, 400 + insets.bottom, sizeFive.width, sizeFive.height); // will
+		searchButton.setBounds(255 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height); // will
 		// let
 		// you
 		// place
