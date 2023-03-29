@@ -2,6 +2,8 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,12 +14,11 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-
 /*
  * @author Isabel Haut
  */
 
-public class HomePage extends Main{
+public class HomePage extends Main {
 
 	JFrame frame;
 	JPanel panel;
@@ -29,21 +30,12 @@ public class HomePage extends Main{
 		this.frame = mainFrame;
 		this.panel = mainPanel;
 
-		// code to put an image on a window
-		ImageIcon img = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
-		// Lithuania/src/FileNamePNG
-		JLabel jlPic = new JLabel(img);
+		panel.setLayout(null); // Takes off automatic placement, lets you position where you specifically want
+								// objects on screen
 
-		Dimension size = jlPic.getPreferredSize();
 		
+		Insets insets = panel.getInsets(); //gives you positioning terms for the computer to reference
 		
-
-		jlPic.setBounds(400, 1000, size.width, size.height); // will let you place
-																// image anywhere you
-																// want based on
-																// coordinates
-
-		panel.add(jlPic); // add image to the panel
 		String[] choices = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of down
 																										// button
 																										// options
@@ -53,10 +45,11 @@ public class HomePage extends Main{
 		dropDownButton.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
-		dropDownButton.setBounds(100, 300, sizeTwo.width, sizeTwo.height); // will let you place
-																			// button anywhere you
-																			// want based on
-																			// coordinates
+		dropDownButton.setBounds(400 + insets.left, 100 + insets.bottom, sizeTwo.width, sizeTwo.height); // will let
+																											// you place
+		// button anywhere you
+		// want based on
+		// coordinates
 		dropDownButton.setVisible(true);
 		panel.add(dropDownButton); // adds the drop down button to the
 
@@ -75,11 +68,13 @@ public class HomePage extends Main{
 		dropDownButtonTwo.setPreferredSize(new Dimension(200, 50)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
-		dropDownButtonTwo.setBounds(100, 400, sizeThree.width, sizeThree.height); // will let you
-																					// place button
-																					// anywhere you
-																					// want based on
-																					// coordinates
+		dropDownButtonTwo.setBounds(400 + insets.left, 200 + insets.bottom, sizeThree.width, sizeThree.height); // will
+																													// let
+																													// you
+		// place button
+		// anywhere you
+		// want based on
+		// coordinates
 		dropDownButtonTwo.setVisible(true);
 		panel.add(dropDownButtonTwo); // adds the drop down button to the panel
 
@@ -100,11 +95,13 @@ public class HomePage extends Main{
 																		// (width,
 																		// height)
 		Dimension sizeFour = dropDownButtonThree.getPreferredSize();
-		dropDownButtonThree.setBounds(800, 500, sizeFour.width, sizeFour.height); // will let you
-																					// place button
-																					// anywhere you
-																					// want based on
-																					// coordinates
+		dropDownButtonThree.setBounds(400 + insets.left, 300 + insets.bottom, sizeFour.width, sizeFour.height); // will
+																													// let
+																													// you
+		// place button
+		// anywhere you
+		// want based on
+		// coordinates
 		dropDownButtonThree.setVisible(true);
 		panel.add(dropDownButtonThree); // adds the drop down button to the panel
 
@@ -123,44 +120,60 @@ public class HomePage extends Main{
 		frame.add(panel, BorderLayout.NORTH); // adds the panel and centers it
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds(100, 100, sizeFive.width, sizeFive.height); // will
-																			// let
-																			// you
-																			// place
-																			// button
-																			// anywhere
-																			// you
-																			// want
-																			// based
-																			// on
-																			// coordinates
-		panel.add(searchButton); // adds the Germany button to the panel
+		searchButton.setBounds(400 + insets.left, 400 + insets.bottom, sizeFive.width, sizeFive.height); // will
+		// let
+		// you
+		// place
+		// button
+		// anywhere
+		// you
+		// want
+		// based
+		// on
+		// coordinates
+		panel.add(searchButton); // adds the button to the panel
+
+		// code to put an image on a window
+		ImageIcon img = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
+		// Lithuania/src/FileNamePNG
+		JLabel jlPic = new JLabel(img);
+
+		Dimension size = jlPic.getPreferredSize();
+
+		
+
+		jlPic.setBounds(200 + insets.left, 125 + insets.bottom, size.width, size.height); // will let you place
+		// image anywhere you
+		// want based on
+		// coordinates
+
+		panel.add(jlPic); // add image to the panel
+
 		Color myBlue = new Color(231, 248, 252); // Color blue
 		panel.setBackground(myBlue); // sets panel to my custom color
 		frame.setVisible(true);
-		
-	}
 
+	}
 
 	public JFrame getFrame() {
 		return frame;
 	}
-	
+
 	public void setFrame(JFrame frame) {
 		this.frame = frame;
 	}
-	
-	public class ButtonListener1 implements ActionListener{
+
+	public class ButtonListener1 implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
 			// TODO Auto-generated method stub
-			
-			if(e.getSource() == searchButton) {
+
+			if (e.getSource() == searchButton) {
 				System.out.println("Test");
 				JFrame frameSelection = new JFrame("frameSelection");
 				frameSelection.setSize(FIRST_SCREEN_SIZE);
 				frameSelection.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				frameSelection.setVisible(true);// creates a new frame;
-			//new SecondFrame();
+				// new SecondFrame();
 			}
 		}
 
