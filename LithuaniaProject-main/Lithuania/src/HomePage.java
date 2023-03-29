@@ -45,7 +45,7 @@ public class HomePage extends Main {
 		dropDownButton.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
-		dropDownButton.setBounds(255 + insets.left, 275 + insets.bottom, sizeTwo.width, sizeTwo.height); // will let
+		dropDownButton.setBounds(215 + insets.left, 275 + insets.bottom, sizeTwo.width, sizeTwo.height); // will let
 																											// you place
 		// button anywhere you
 		// want based on
@@ -68,7 +68,7 @@ public class HomePage extends Main {
 		dropDownButtonTwo.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with (width,
 																	// height)
 		Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
-		dropDownButtonTwo.setBounds(255 + insets.left, 375 + insets.bottom, sizeThree.width, sizeThree.height); // will
+		dropDownButtonTwo.setBounds(215 + insets.left, 375 + insets.bottom, sizeThree.width, sizeThree.height); // will
 																													// let
 																													// you
 		// place button
@@ -95,7 +95,7 @@ public class HomePage extends Main {
 																		// (width,
 																		// height)
 		Dimension sizeFour = dropDownButtonThree.getPreferredSize();
-		dropDownButtonThree.setBounds(255 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height); // will
+		dropDownButtonThree.setBounds(215 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height); // will
 																													// let
 																													// you
 		// place button
@@ -120,7 +120,7 @@ public class HomePage extends Main {
 		frame.add(panel, BorderLayout.NORTH); // adds the panel and centers it
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds(255 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height); // will
+		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height); // will
 		// let
 		// you
 		// place
@@ -134,20 +134,45 @@ public class HomePage extends Main {
 		panel.add(searchButton); // adds the button to the panel
 
 		// code to put an image on a window
-		ImageIcon img = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
+		ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/MySquare.PNG"); // all images should have the
 		// Lithuania/src/FileNamePNG
-		JLabel jlPic = new JLabel(img);
+		JLabel jlPic = new JLabel(mySquare);
 
 		Dimension size = jlPic.getPreferredSize();
 
 		
 
-		jlPic.setBounds(200 + insets.left, 125 + insets.bottom, size.width, size.height); // will let you place
+		jlPic.setBounds(155 + insets.left, 125 + insets.bottom, size.width, size.height); // will let you place
 		// image anywhere you
 		// want based on
 		// coordinates
 
 		panel.add(jlPic); // add image to the panel
+		
+		
+		
+		
+		
+		
+		
+		// code to put an image on a window
+				ImageIcon CastleHome = new ImageIcon("Lithuania/src/Images/CastleHomePage.PNG"); // all images should have the
+				// Lithuania/src/FileNamePNG
+				JLabel jlPic2 = new JLabel(CastleHome);
+
+				Dimension sizeSix = jlPic2.getPreferredSize();
+
+				
+
+				jlPic2.setBounds(280 + insets.left, -33 + insets.bottom, sizeSix.width, 200 + sizeSix.height); // will let you place
+				// image anywhere you
+				// want based on
+				// coordinates
+
+				panel.add(jlPic2); // add image to the panel
+		
+		
+		
 
 		Color myBlue = new Color(231, 248, 252); // Color blue
 		panel.setBackground(myBlue); // sets panel to my custom color
