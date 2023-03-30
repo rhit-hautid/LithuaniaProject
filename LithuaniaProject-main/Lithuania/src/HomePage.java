@@ -25,6 +25,7 @@ public class HomePage extends Main {
 	JPanel panel;
 	JPanel panel2;
 	JButton searchButton = new JButton("Search");
+	JButton mapButton = new JButton("Map");
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -92,7 +93,7 @@ public class HomePage extends Main {
 		final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree); // creates a new drop down
 																							// button
 
-		dropDownButtonThree.setPreferredSize(new Dimension(400, 70)); // sets the size of the Germany button with
+		dropDownButtonThree.setPreferredSize(new Dimension(190, 70)); // sets the size of the Germany button with
 																		// (width,
 																		// height)
 		Dimension sizeFour = dropDownButtonThree.getPreferredSize();
@@ -106,34 +107,30 @@ public class HomePage extends Main {
 		dropDownButtonThree.setVisible(true);
 		panel.add(dropDownButtonThree); // adds the drop down button to the panel
 
-		// this is an optional OK button that can be implemented but i think its
-		// redundant as we will have a search button
-//	    JButton btn = new JButton("OK"); 
-//	    panel.add(btn);
-
+	
+		
+		
+// code for search button
 		searchButton.addActionListener(new ButtonListener1());
-		searchButton.setPreferredSize(new Dimension(400, 70)); // sets the size
-																// of the
-																// Germany
-																// button with
-																// (width,
-																// height)
-		frame.add(panel, BorderLayout.NORTH); // adds the panel and centers it
-		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
+		searchButton.setPreferredSize(new Dimension(400, 70));
+		frame.add(panel, BorderLayout.NORTH); 
+		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
 		Dimension sizeFive = searchButton.getPreferredSize();
-		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height); // will
-		// let
-		// you
-		// place
-		// button
-		// anywhere
-		// you
-		// want
-		// based
-		// on
-		// coordinates
+		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height);
 		panel.add(searchButton); // adds the button to the panel
 		
+		
+		
+		
+		// code for map button
+		mapButton.addActionListener(new ButtonListener1());
+		mapButton.setPreferredSize(new Dimension(190, 70)); //
+		mapButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
+		Dimension sizeNine = mapButton.getPreferredSize();
+		mapButton.setBounds(425 + insets.left, 475 + insets.bottom, sizeNine.width, sizeNine.height); 
+		panel.add(mapButton); // adds the button to the panel
+		
+
 		
 		
 		
