@@ -117,8 +117,8 @@ public class HomePage extends Main {
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
 		Dimension sizeFive = searchButton.getPreferredSize();
 		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height);
+		// searchButton.setBackground(Color.BLACK); can change the color of button 
 		panel.add(searchButton); // adds the button to the panel
-		
 		
 		
 		
@@ -128,6 +128,7 @@ public class HomePage extends Main {
 		mapButton.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
 		Dimension sizeNine = mapButton.getPreferredSize();
 		mapButton.setBounds(425 + insets.left, 475 + insets.bottom, sizeNine.width, sizeNine.height); 
+		// searchButton.setBackground(Color.BLACK); can change the color of button 
 		panel.add(mapButton); // adds the button to the panel
 		
 
