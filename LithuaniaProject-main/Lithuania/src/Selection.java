@@ -17,6 +17,7 @@ public class Selection {
 	JPanel panel_Selection;
 			
 	public Selection() {
+		
 		this.frame_Selection = new JFrame("frameSelection");
 		this.panel_Selection = new JPanel();
 		
