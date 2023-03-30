@@ -1,7 +1,9 @@
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-
+/*
+ * @author Sebastien Hughes
+ */
 public class MouseHandler implements MouseMotionListener, MouseListener {
 
 	
@@ -22,7 +24,6 @@ public class MouseHandler implements MouseMotionListener, MouseListener {
 //			}
 //		}
 	}
-
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub

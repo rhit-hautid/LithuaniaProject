@@ -7,6 +7,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
+/*
+ * @author Sebastien Hughes
+ */
 public class ImageButton{
 	
 	JButton Button =  new JButton("Image Here");

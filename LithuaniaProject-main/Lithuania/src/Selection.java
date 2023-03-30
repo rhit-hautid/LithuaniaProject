@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
+/*
+ * @author Sebastien Hughes
+ */
 public class Selection {
 	
 	public static final Dimension FIRST_SCREEN_SIZE = new Dimension(1500, 1000);
