@@ -13,6 +13,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.WindowConstants;
 
 /*
  * @author Isabel Haut
@@ -216,11 +217,12 @@ public class HomePage extends Main {
 			// TODO Auto-generated method stub
 
 			if (e.getSource() == searchButton) {
+				
 				System.out.println("Test");
-				JFrame frameSelection = new JFrame("frameSelection");
-				frameSelection.setSize(FIRST_SCREEN_SIZE);
-				frameSelection.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-				frameSelection.setVisible(true);// creates a new frame;
+				new Selection();
+				
+				// creates a new frame;
+				
 				// new SecondFrame();
 			}
 		}
