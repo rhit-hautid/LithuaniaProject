@@ -110,7 +110,7 @@ public class HomePage extends Main {
 	
 		
 		
-// code for search button
+		// code for search button
 		searchButton.addActionListener(new ButtonListener1());
 		searchButton.setPreferredSize(new Dimension(400, 70));
 		frame.add(panel, BorderLayout.NORTH); 
@@ -133,7 +133,7 @@ public class HomePage extends Main {
 
 		
 		
-		
+		//code for my heading 
 		JLabel label = new JLabel("My label");
 		label.setPreferredSize(new Dimension(400, 70)); 
 		Dimension sizeSeven = label.getPreferredSize();
@@ -143,6 +143,8 @@ public class HomePage extends Main {
 		label.setBounds(305 + insets.left, 125 + insets.bottom, sizeSeven.width, sizeSeven.height);
 		
 		
+		
+		//code for my short description 
 		JLabel labelTwo = new JLabel("My label");
 		labelTwo.setPreferredSize(new Dimension(600, 100)); 
 		Dimension sizeEight = labelTwo.getPreferredSize();
