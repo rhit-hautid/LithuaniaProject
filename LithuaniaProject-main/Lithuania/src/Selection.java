@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 
 /*
  * @author Sebastien Hughes
+ * New Comment
  */
 public class Selection {
 	
