@@ -41,7 +41,7 @@ public class HomePage extends Main {
 		
 		Insets insets = panel.getInsets(); //gives you positioning terms for the computer to reference
 		
-		String[] choices = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of down
+		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of down
 																										// button
 																										// options
 
@@ -61,7 +61,7 @@ public class HomePage extends Main {
 		
 		
 		
-		String[] choicesTwo = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
+		String[] choicesTwo = { "Number of People", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
 																											// down
 																											// button
 																											// options
@@ -85,7 +85,7 @@ public class HomePage extends Main {
 		
 		
 
-		String[] choicesThree = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
+		String[] choicesThree = { "Location", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
 																											// down
 																											// button
 																											// options
@@ -221,9 +221,9 @@ public class HomePage extends Main {
 				System.out.println("Test");
 				new Selection();
 				
-				// creates a new frame;
+				// Sends you to Selection page when Search Button is clicked 
 				
-				// new SecondFrame();
+				
 			}
 		}
 
