@@ -7,6 +7,7 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.ComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -21,11 +22,13 @@ import javax.swing.WindowConstants;
 
 public class HomePage extends Main {
 
+	
 	JFrame frame;
 	JPanel panel;
 	JPanel panel2;
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
+	
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -55,11 +58,9 @@ public class HomePage extends Main {
 		dropDownButton.setVisible(true);
 		panel.add(dropDownButton); // adds the drop down button to the
 
-		// this is an optional OK button that can be implemented but i think its
-		// redundant as we will have a search button
-//	    JButton btn = new JButton("OK"); 
-//	    panel.add(btn);
-
+		
+		
+		
 		String[] choicesTwo = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
 																											// down
 																											// button
@@ -80,10 +81,9 @@ public class HomePage extends Main {
 		dropDownButtonTwo.setVisible(true);
 		panel.add(dropDownButtonTwo); // adds the drop down button to the panel
 
-		// this is an optional OK button that can be implemented but i think its
-		// redundant as we will have a search button
-//	    JButton btn = new JButton("OK"); 
-//	    panel.add(btn);
+
+		
+		
 
 		String[] choicesThree = { "CHOICE 1", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" }; // list of
 																											// down
