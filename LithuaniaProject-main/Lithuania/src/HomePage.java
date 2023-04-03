@@ -2,19 +2,18 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
-import java.awt.GridLayout;
+
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.ComboBoxModel;
+
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.WindowConstants;
 
 /*
  * @author Isabel Haut
@@ -40,9 +39,6 @@ public class HomePage extends Main {
 		// gives you positioning terms for the computer to reference
 		Insets insets = panel.getInsets();
 
-		
-		
-		
 		// Code for DropDown Button One
 		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
@@ -52,6 +48,7 @@ public class HomePage extends Main {
 		dropDownButton.setVisible(true);
 		panel.add(dropDownButton);
 
+		
 		
 		
 		// Code for DropDown Button Two
@@ -85,9 +82,8 @@ public class HomePage extends Main {
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeFive = searchButton.getPreferredSize();
 		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height);
-		// searchButton.setBackground(Color.BLACK); can change the color of button
-		panel.add(searchButton); // adds the button to the panel
-
+		panel.add(searchButton); 
+		
 		
 		
 		
@@ -97,8 +93,7 @@ public class HomePage extends Main {
 		mapButton.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeNine = mapButton.getPreferredSize();
 		mapButton.setBounds(425 + insets.left, 475 + insets.bottom, sizeNine.width, sizeNine.height);
-		// searchButton.setBackground(Color.BLACK); can change the color of button
-		panel.add(mapButton); // adds the button to the panel
+		panel.add(mapButton); 
 
 		
 		
@@ -109,7 +104,7 @@ public class HomePage extends Main {
 		Dimension sizeSeven = label.getPreferredSize();
 		label.setText("Find A Place To Visit");
 		panel.add(label);
-		label.setFont(new Font("American Typewriter", Font.BOLD, 20)); // sets the font for the Germany Button
+		label.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
 		label.setBounds(305 + insets.left, 125 + insets.bottom, sizeSeven.width, sizeSeven.height);
 
 		
@@ -119,10 +114,9 @@ public class HomePage extends Main {
 		JLabel labelTwo = new JLabel("My label");
 		labelTwo.setPreferredSize(new Dimension(600, 100));
 		Dimension sizeEight = labelTwo.getPreferredSize();
-		labelTwo.setText("Come here to explore the beautiful castles of Lithuania"); // text can be changed just
-																						// inserted for layout
+		labelTwo.setText("Come here to explore the beautiful castles of Lithuania"); 
 		panel.add(labelTwo);
-		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15)); // sets the font for the Germany Button
+		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15)); 
 		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
 
 		
@@ -146,18 +140,37 @@ public class HomePage extends Main {
 		panel.add(jlPic2);
 
 		
-		
-		
+			
+	
 		// Color blue
 		Color myBlue = new Color(231, 248, 252);
 
 		// sets panel to my custom color
 		panel.setBackground(myBlue);
 		// makes frame visible
+
 		frame.setVisible(true);
+
+		
+		
+		
+		// Creates a new window that contains a map of Lithuania when you click the map
+		// button
+		mapButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				JFrame mapFrame = new JFrame("Map Window");
+				mapFrame.setSize(500, 500);
+				// add map components to the new frame
+				// ...
+				mapFrame.setVisible(true);
+			}
+		});
 
 	}
 
+	
+	
+	
 	public JFrame getFrame() {
 		return frame;
 	}
@@ -169,7 +182,6 @@ public class HomePage extends Main {
 	// Sends you to Selection page when Search Button is clicked
 	public class ButtonListener1 implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
 
 			if (e.getSource() == searchButton) {
 
