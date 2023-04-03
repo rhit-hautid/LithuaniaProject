@@ -24,6 +24,7 @@ public class HomePage extends Main {
 	JFrame frame;
 	JPanel panel;
 	JPanel panel2;
+
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
 
@@ -153,16 +154,31 @@ public class HomePage extends Main {
 
 		
 		
-		
 		// Creates a new window that contains a map of Lithuania when you click the map
 		// button
 		mapButton.addActionListener(new ActionListener() {
+		
 			public void actionPerformed(ActionEvent e) {
-				JFrame mapFrame = new JFrame("Map Window");
-				mapFrame.setSize(500, 500);
-				// add map components to the new frame
-				// ...
-				mapFrame.setVisible(true);
+				
+				JFrame mapWindow = new JFrame("Map Window");
+				JPanel mapPanel = new JPanel();
+				mapPanel.setLayout(null);
+				mapWindow.add(mapPanel);
+
+				// add image of map to the panel
+				ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
+				JLabel jlPic = new JLabel(mySquare);
+				Dimension size = jlPic.getPreferredSize();
+				jlPic.setBounds(0, 0, size.width, size.height);
+				mapPanel.add(jlPic);
+
+				// set size and visibility of the map window
+				mapWindow.setSize(810, 700);
+				mapPanel.setBackground(Color.WHITE);
+				mapWindow.setVisible(true);
+				
+				
+			
 			}
 		});
 
