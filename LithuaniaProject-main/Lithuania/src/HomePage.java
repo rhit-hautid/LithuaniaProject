@@ -7,7 +7,6 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -40,6 +39,8 @@ public class HomePage extends Main {
 		// gives you positioning terms for the computer to reference
 		Insets insets = panel.getInsets();
 
+		
+		
 		// Code for DropDown Button One
 		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
@@ -49,9 +50,6 @@ public class HomePage extends Main {
 		dropDownButton.setVisible(true);
 		panel.add(dropDownButton);
 
-		
-		
-		
 		// Code for DropDown Button Two
 		String[] choicesTwo = { "Number of People", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo);
@@ -61,9 +59,6 @@ public class HomePage extends Main {
 		dropDownButtonTwo.setVisible(true);
 		panel.add(dropDownButtonTwo);
 
-		
-		
-		
 		// Code for DropDown Button Three
 		String[] choicesThree = { "Location", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree);
@@ -83,18 +78,15 @@ public class HomePage extends Main {
 		searchButton.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeFive = searchButton.getPreferredSize();
 		searchButton.setBounds(215 + insets.left, 575 + insets.bottom, sizeFive.width, sizeFive.height);
-		panel.add(searchButton); 
-		
-		
-		
-		
+		panel.add(searchButton);
+
 		// code for map button
 		mapButton.addActionListener(new ButtonListener1());
 		mapButton.setPreferredSize(new Dimension(190, 70)); //
 		mapButton.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeNine = mapButton.getPreferredSize();
 		mapButton.setBounds(425 + insets.left, 475 + insets.bottom, sizeNine.width, sizeNine.height);
-		panel.add(mapButton); 
+		panel.add(mapButton);
 
 		
 		
@@ -105,19 +97,16 @@ public class HomePage extends Main {
 		Dimension sizeSeven = label.getPreferredSize();
 		label.setText("Find A Place To Visit");
 		panel.add(label);
-		label.setFont(new Font("American Typewriter", Font.BOLD, 20)); 
+		label.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		label.setBounds(305 + insets.left, 125 + insets.bottom, sizeSeven.width, sizeSeven.height);
 
-		
-		
-		
 		// code for my short description
 		JLabel labelTwo = new JLabel("My label");
 		labelTwo.setPreferredSize(new Dimension(600, 100));
 		Dimension sizeEight = labelTwo.getPreferredSize();
-		labelTwo.setText("Come here to explore the beautiful castles of Lithuania"); 
+		labelTwo.setText("Come here to explore the beautiful castles of Lithuania");
 		panel.add(labelTwo);
-		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15)); 
+		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15));
 		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
 
 		
@@ -130,9 +119,6 @@ public class HomePage extends Main {
 		jlPic.setBounds(155 + insets.left, 125 + insets.bottom, size.width, size.height);
 		panel.add(jlPic);
 
-		
-		
-		
 		// code to put castle image on the window
 		ImageIcon CastleHome = new ImageIcon("Lithuania/src/Images/CastleHomePage.PNG");
 		JLabel jlPic2 = new JLabel(CastleHome);
@@ -141,8 +127,7 @@ public class HomePage extends Main {
 		panel.add(jlPic2);
 
 		
-			
-	
+		
 		// Color blue
 		Color myBlue = new Color(231, 248, 252);
 
@@ -154,12 +139,12 @@ public class HomePage extends Main {
 
 		
 		
-		// Creates a new window that contains a map of Lithuania when you click the map
-		// button
-		mapButton.addActionListener(new ActionListener() {
 		
+		// Creates a new window containing a map of Lithuania when click map button
+		mapButton.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
-				
+
 				JFrame mapWindow = new JFrame("Map Window");
 				JPanel mapPanel = new JPanel();
 				mapPanel.setLayout(null);
@@ -176,15 +161,12 @@ public class HomePage extends Main {
 				mapWindow.setSize(810, 700);
 				mapPanel.setBackground(Color.WHITE);
 				mapWindow.setVisible(true);
-				
-				
-			
+
 			}
 		});
 
 	}
 
-	
 	
 	
 	public JFrame getFrame() {
