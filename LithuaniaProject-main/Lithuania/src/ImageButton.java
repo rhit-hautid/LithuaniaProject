@@ -5,6 +5,8 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /*
@@ -12,7 +14,8 @@ import javax.swing.JButton;
  */
 public class ImageButton{
 	
-	JButton Button =  new JButton("Image Here");
+	ImageIcon ii = new ImageIcon("Lithuania/src/Images/TraikaiCastle.PNG");
+	JButton Button =  new JButton(ii);
 	int side_value = 330;
 	
 
@@ -21,6 +24,7 @@ public class ImageButton{
 		System.out.println("Test ImageButton");
 		Button.setPreferredSize(new Dimension(side_value, side_value));
 		Button.addActionListener(new ButtonListener2());
+		
 		
 	}
 	

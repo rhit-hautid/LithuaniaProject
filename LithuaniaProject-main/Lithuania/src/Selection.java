@@ -19,7 +19,7 @@ public class Selection {
 	
 	ArrayList<ImageButton> List_Button = new ArrayList<ImageButton>();
 	
-	Color myBlue = new Color(231, 248, 4); // Color blue
+	Color myBlue = new Color(231, 248, 252); // Color blue
 	JFrame frame_Selection;
 	JPanel panel_Selection;
 			
@@ -63,11 +63,11 @@ public class Selection {
 			Dimension sizeTwo = List_Button.get(i).Button.getPreferredSize();
 			System.out.println("Placing Image Button " + (i+1));
 			if(i >= 3) {
-				List_Button.get(i).Button.setBounds(100 + (450*(i-3)) + insets.left, 410 + insets.bottom, sizeTwo.width, sizeTwo.height);
+				List_Button.get(i).Button.setBounds(100 + (470*(i-3)) + insets.left, 405 + insets.bottom, sizeTwo.width, sizeTwo.height);
 				panel_Selection.add(List_Button.get(i).Button);
 				
 			} else {
-				List_Button.get(i).Button.setBounds(100 + (450*i) + insets.left, 20 + insets.bottom, sizeTwo.width, sizeTwo.height);
+				List_Button.get(i).Button.setBounds(100 + (470*i) + insets.left, 20 + insets.bottom, sizeTwo.width, sizeTwo.height);
 				panel_Selection.add(List_Button.get(i).Button);
 			}
 		}
