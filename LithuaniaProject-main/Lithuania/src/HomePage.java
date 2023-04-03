@@ -39,8 +39,6 @@ public class HomePage extends Main {
 		// gives you positioning terms for the computer to reference
 		Insets insets = panel.getInsets();
 
-		
-		
 		// Code for DropDown Button One
 		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
@@ -68,9 +66,6 @@ public class HomePage extends Main {
 		dropDownButtonThree.setVisible(true);
 		panel.add(dropDownButtonThree);
 
-		
-		
-		
 		// code for search button
 		searchButton.addActionListener(new ButtonListener1());
 		searchButton.setPreferredSize(new Dimension(400, 70));
@@ -88,9 +83,6 @@ public class HomePage extends Main {
 		mapButton.setBounds(425 + insets.left, 475 + insets.bottom, sizeNine.width, sizeNine.height);
 		panel.add(mapButton);
 
-		
-		
-		
 		// code for my heading
 		JLabel label = new JLabel("My label");
 		label.setPreferredSize(new Dimension(400, 70));
@@ -109,9 +101,6 @@ public class HomePage extends Main {
 		labelTwo.setFont(new Font("American Typewriter", Font.BOLD, 15));
 		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
 
-		
-		
-		
 		// code to put white square image on the window
 		ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/MySquare.PNG");
 		JLabel jlPic = new JLabel(mySquare);
@@ -126,8 +115,6 @@ public class HomePage extends Main {
 		jlPic2.setBounds(280 + insets.left, -33 + insets.bottom, sizeSix.width, 200 + sizeSix.height);
 		panel.add(jlPic2);
 
-		
-		
 		// Color blue
 		Color myBlue = new Color(231, 248, 252);
 
@@ -137,38 +124,18 @@ public class HomePage extends Main {
 
 		frame.setVisible(true);
 
-		
-		
-		
 		// Creates a new window containing a map of Lithuania when click map button
 		mapButton.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
 
-				JFrame mapWindow = new JFrame("Map Window");
-				JPanel mapPanel = new JPanel();
-				mapPanel.setLayout(null);
-				mapWindow.add(mapPanel);
-
-				// add image of map to the panel
-				ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
-				JLabel jlPic = new JLabel(mySquare);
-				Dimension size = jlPic.getPreferredSize();
-				jlPic.setBounds(0, 0, size.width, size.height);
-				mapPanel.add(jlPic);
-
-				// set size and visibility of the map window
-				mapWindow.setSize(810, 700);
-				mapPanel.setBackground(Color.WHITE);
-				mapWindow.setVisible(true);
+				new MapWindow();
 
 			}
 		});
 
 	}
 
-	
-	
 	public JFrame getFrame() {
 		return frame;
 	}
