@@ -13,12 +13,13 @@ import javax.swing.JButton;
 public class ImageButton{
 	
 	JButton Button =  new JButton("Image Here");
+	int side_value = 330;
 	
 
 	public ImageButton(JFrame frame_Selection, JPanel panel_Selection) {
 		
 		System.out.println("Test ImageButton");
-		Button.setPreferredSize(new Dimension(370, 370));
+		Button.setPreferredSize(new Dimension(side_value, side_value));
 		Button.addActionListener(new ButtonListener2());
 		
 	}
