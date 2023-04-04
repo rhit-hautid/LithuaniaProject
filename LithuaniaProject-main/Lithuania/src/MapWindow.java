@@ -30,8 +30,8 @@ public class MapWindow {
 		mapWindow.add(mapPanel);
 
 		int[][] buttonCoordinates = {
-				{ 100, 210 }, // first button coordinates
-				{ 120, 120 }, // second button coordinates
+				{ 105, 250 }, // first button coordinates
+				{ 180, 180 }, // second button coordinates
 				{ 140, 140 }, // third button coordinates
 				{ 160, 160 }, // fourth button coordinates
 				{ 180, 180 }, // fifth button coordinates
