@@ -135,13 +135,15 @@ public class CircleButton extends JButton {
 
 		if (mouseOver) {
 			g.setColor(Color.BLUE);
+			g.setColor(Color.BLUE);
 		} else {
+			g.setColor(Color.BLACK);
 			g.setColor(Color.BLACK);
 		}
 		
 		g.drawOval(getWidth() / 2 - radius, getHeight() / 2 - radius, diameter, diameter);
 
-		g.setColor(Color.BLACK);
+		
 		g.setFont(getFont());
 		FontMetrics metrics = g.getFontMetrics(getFont());
 		int stringWidth = metrics.stringWidth(getText());
