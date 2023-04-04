@@ -151,7 +151,7 @@ public class HomePage extends Main {
 			if (e.getSource() == searchButton) {
 
 				System.out.println("Test");
-				new Selection();
+				new Search();
 
 			}
 		}
