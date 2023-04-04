@@ -19,6 +19,7 @@ public class Selection {
 	
 	ArrayList<ImageButton> List_Button = new ArrayList<ImageButton>();
 	
+	
 	Color myBlue = new Color(231, 248, 252); // Color blue
 	JFrame frame_Selection;
 	JPanel panel_Selection;
@@ -37,6 +38,7 @@ public class Selection {
 		panel_Selection.setBackground(myBlue);
 		panel_Selection.setSize(FIRST_SCREEN_SIZE);
 		
+		AddSearches();
 		CreateImageButtons();
 		PlaceImageButtons();
 		
@@ -44,13 +46,22 @@ public class Selection {
 		frame_Selection.setVisible(true);
 		
 	}
+	
+	public void AddSearches() {
+		//If statement for proximaty to current location to determine relevant number of image buttons
+		for (int i = 0; i < 6; i++) {	
+			
+		System.out.println("Gimme Doz Image" + (i+1));
+		
+		}
+	}
 
 	public void CreateImageButtons() {
 		//If statement for proximaty to current location to determine relevant number of image buttons
 		for (int i = 0; i < 6; i++) {	
 			
 		System.out.println("Creating Image Button" + i);
-		List_Button.add(new ImageButton(frame_Selection, panel_Selection));
+		List_Button.add(new ImageButton(frame_Selection, panel_Selection,"Lithuania/src/Images/TraikaiCastle.PNG"));
 		
 		}
 	}

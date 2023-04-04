@@ -12,19 +12,20 @@ import javax.swing.JButton;
 /*
  * @author Sebastien Hughes
  */
-public class ImageButton{
+public class ImageButton {
 	
-	ImageIcon ii = new ImageIcon("Lithuania/src/Images/TraikaiCastle.PNG");
-	JButton Button =  new JButton(ii);
+	JButton Button = new JButton();
 	int side_value = 330;
 	
 
-	public ImageButton(JFrame frame_Selection, JPanel panel_Selection) {
+	public ImageButton(JFrame frame_Selection, JPanel panel_Selection, String image ) {
+		
+		ImageIcon ii = new ImageIcon(image);
+		Button.setIcon(ii);
 		
 		System.out.println("Test ImageButton");
 		Button.setPreferredSize(new Dimension(side_value, side_value));
 		Button.addActionListener(new ButtonListener2());
-		
 		
 	}
 	
