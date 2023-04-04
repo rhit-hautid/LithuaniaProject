@@ -1,5 +1,8 @@
 import javax.swing.JButton;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.geom.Point2D;
@@ -121,11 +124,12 @@ public class CircleButton extends JButton {
 
 		int diameter = getDiameter();
 		int radius = diameter / 2;
+		
 
 		if (mousePressed) {
-			g.setColor(Color.LIGHT_GRAY);
+			g.setColor(Color.GREEN);
 		} else {
-			g.setColor(Color.WHITE);
+			g.setColor(Color.RED);
 		}
 		g.fillOval(getWidth() / 2 - radius, getHeight() / 2 - radius, diameter, diameter);
 
@@ -134,6 +138,7 @@ public class CircleButton extends JButton {
 		} else {
 			g.setColor(Color.BLACK);
 		}
+		
 		g.drawOval(getWidth() / 2 - radius, getHeight() / 2 - radius, diameter, diameter);
 
 		g.setColor(Color.BLACK);

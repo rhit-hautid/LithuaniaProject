@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  * @author Isabel Haut
  */
 
-public class MapWindow {
+public class MapWindow  {
 	
 	//Instantiated components 
 	JFrame mapWindow;
@@ -33,7 +33,7 @@ public class MapWindow {
 		jlPic.setBounds(0, 0, size.width, size.height);
 		mapPanel.add(jlPic);
 		
-		
+
 		// set size and visibility of the map window
 		mapWindow.setSize(810, 700);
 		mapPanel.setBackground(Color.WHITE);
