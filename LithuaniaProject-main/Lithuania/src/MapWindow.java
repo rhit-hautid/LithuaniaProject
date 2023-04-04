@@ -30,16 +30,16 @@ public class MapWindow {
 		mapWindow.add(mapPanel);
 
 		int[][] buttonCoordinates = {
-				{ 105, 250 }, // first button coordinates
-				{ 180, 180 }, // second button coordinates
-				{ 140, 140 }, // third button coordinates
-				{ 160, 160 }, // fourth button coordinates
-				{ 180, 180 }, // fifth button coordinates
-				{ 200, 200 }, // sixth button coordinates
-				{ 220, 220 }, // seventh button coordinates
-				{ 240, 240 }, // eighth button coordinates
-				{ 260, 260 }, // ninth button coordinates
-				{ 280, 280 }, // tenth button coordinates
+				{ 105, 250 }, // Klaipedos button coordinates
+				{ 185, 180 }, // Telsiai button coordinates
+				{ 215, 315 }, // Taurages button coordinates
+				{ 320, 180 }, // Saiauliai button coordinates
+				{ 513, 180 }, // Panevezio button coordinates
+				{ 410, 400 }, // Kauno button coordinates
+				{ 610, 265 }, // Utenos button coordinates
+				{ 548, 440 }, // Vilniaus button coordinates
+				{ 423, 545 }, // Alytaus button coordinates
+				{ 305, 475 }, // Marijampoles button coordinates
 		};
 
 		// adds 10 of my circle buttons to the window
