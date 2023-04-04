@@ -10,7 +10,6 @@ import java.awt.event.ActionEvent;
  * implementation, CircleButton. It creates a JFrame with a CircleButton that,
  * when clicked, prints a message to the console.
  */
-
 public class CircleButtonDemo {
 	/**
 	 * The main method creates a JFrame with a CircleButton that, when clicked,
@@ -19,7 +18,6 @@ public class CircleButtonDemo {
 	 * @param args An array of command-line arguments for the application. Not used
 	 *             in this implementation.
 	 */
-
 	public static void main(String[] args) {
 
 		JFrame frame = new JFrame("Circle Button Demo");
@@ -37,7 +35,6 @@ public class CircleButtonDemo {
 			 * @param e The ActionEvent object containing information about the event that
 			 *          occurred.
 			 */
-
 			public void actionPerformed(ActionEvent e) {
 				System.out.println("Clicked!");
 			}
