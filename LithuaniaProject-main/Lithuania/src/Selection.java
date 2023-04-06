@@ -9,11 +9,13 @@ import javax.swing.JPanel;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
+import javax.swing.JLabel;
+
 
 /*
  * @author Sebastien Hughes
  */
-public class Selection {
+public class Selection extends Abstract_DataDisplay{
 	
 	public static final Dimension FIRST_SCREEN_SIZE = new Dimension(1500, 830);
 	
@@ -40,7 +42,8 @@ public class Selection {
 		
 		AddSearches();
 		CreateImageButtons();
-		PlaceImageButtons();
+		dis_Image();
+		dis_Caption();
 		
 		
 		frame_Selection.setVisible(true);
@@ -65,9 +68,9 @@ public class Selection {
 		
 		}
 	}
-	
-	public void PlaceImageButtons() {
-		
+
+	@Override
+	void dis_Image() {
 		Insets insets = panel_Selection.getInsets();
 		//If statement for proximaty to current location to determine relevant number of image buttons
 		for (int i = 0; i <List_Button.size(); i++) {
@@ -82,6 +85,21 @@ public class Selection {
 				panel_Selection.add(List_Button.get(i).Button);
 			}
 		}
+	}
+
+	@Override
+	void dis_Caption() {
+		for (int i = 0; i < 6; i++) {	
+			
+			System.out.println("Creating Image Button" + i);
+			panel_Selection.add(new JLabel("Gimme the Juice"));
+			
+			}
+	}
+
+	@Override
+	void dis_HighPrio() {
+		// TODO Auto-generated method stub
 		
 	}
 	

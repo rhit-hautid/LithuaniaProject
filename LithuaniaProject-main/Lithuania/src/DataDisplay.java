@@ -1,22 +1,40 @@
+import java.awt.Dimension;
 
-public class DataDisplay extends Abstract_DataDisplay{
+import javax.swing.JFrame;
+import javax.swing.JPanel;
 
-	@Override
-	void dis_Image() {
-		// TODO Auto-generated method stub
-		
+public class DataDisplay {
+	
+	//size of map is (810,700)
+	private String name;
+    private String description;
+    private double latitude;
+    private double longitude;
+	
+	
+    public DataDisplay(String name, String description, double latitude, double longitude) {
+    	this.setName(name);
+    	this.setDescription(description);
+    	this.latitude = latitude;
+    	this.longitude = longitude;
+
+    }
+    
+
+	public String getName() {
+		return name;
 	}
 
-	@Override
-	void dis_Caption() {
-		// TODO Auto-generated method stub
-		
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	@Override
-	void dis_HighPrio() {
-		// TODO Auto-generated method stub
-		
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

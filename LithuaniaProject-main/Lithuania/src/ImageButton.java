@@ -1,7 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -36,7 +35,8 @@ public class ImageButton {
 			// TODO Auto-generated method stub
 
 			if (e.getSource() == Button) {
-				Button.setBackground(Color.CYAN);
+				System.out.println("Test DataScreen");
+				new DataScreen();
 				
 			}
 		}

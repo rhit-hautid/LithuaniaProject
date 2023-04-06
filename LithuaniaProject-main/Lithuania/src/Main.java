@@ -30,7 +30,8 @@ public class Main {
 
 		JFrame frame = new JFrame(); // creates a new frame
 		JPanel panel = new JPanel(); // creates a new panel
-
+		
+	
 		frame.setSize(FIRST_SCREEN_SIZE);
 		panel.setPreferredSize(FIRST_SCREEN_SIZE);
 		frame.setTitle("Home");
@@ -38,7 +39,8 @@ public class Main {
 
 		// frame.pack(); //fits the frame to the size of the two buttons
 		frame.setVisible(true);
-
+		
+		new Location_Information();
 		new HomePage(frame, panel);
 
 	}
