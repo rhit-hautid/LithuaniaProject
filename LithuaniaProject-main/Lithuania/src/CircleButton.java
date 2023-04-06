@@ -42,8 +42,8 @@ public class CircleButton extends JButton {
 		MouseAdapter mouseListener = new MouseAdapter() {
 
 			@Override
-			public void mousePressed(MouseEvent me) {
-				if (contains(me.getX(), me.getY())) {
+			public void mousePressed(MouseEvent e) {
+				if (contains(e.getX(), e.getY())) {
 					mousePressed = true;
 					repaint();
 	
@@ -51,21 +51,21 @@ public class CircleButton extends JButton {
 			}
 
 			@Override
-			public void mouseReleased(MouseEvent me) {
+			public void mouseReleased(MouseEvent e) {
 				mousePressed = false;
 				repaint();
 			}
 
 			@Override
-			public void mouseExited(MouseEvent me) {
+			public void mouseExited(MouseEvent e) {
 				mouseOver = false;
 				mousePressed = false;
 				repaint();
 			}
 
 			@Override
-			public void mouseMoved(MouseEvent me) {
-				mouseOver = contains(me.getX(), me.getY());
+			public void mouseMoved(MouseEvent e) {
+				mouseOver = contains(e.getX(), e.getY());
 				repaint();
 			}
 		};
