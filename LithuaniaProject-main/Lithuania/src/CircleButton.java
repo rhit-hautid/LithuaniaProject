@@ -20,6 +20,9 @@ import java.awt.event.MouseEvent;
  * mouseMoved.
  */
 
+/*
+ * @author Isabel Haut 
+ */
 public class CircleButton extends JButton {
 
 	private boolean mouseOver = false;

@@ -18,6 +18,11 @@ public class CircleButtonDemo {
 	 * @param args An array of command-line arguments for the application. Not used
 	 *             in this implementation.
 	 */
+	
+	/*
+	 * @author Isabel Haut 
+	 */
+	
 	public static void main(String[] args) {
 
 		JFrame frame = new JFrame("Circle Button Demo");
