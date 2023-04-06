@@ -46,6 +46,7 @@ public class CircleButton extends JButton {
 				if (contains(me.getX(), me.getY())) {
 					mousePressed = true;
 					repaint();
+	
 				}
 			}
 
@@ -83,6 +84,7 @@ public class CircleButton extends JButton {
 		int diameter = Math.min(getWidth(), getHeight());
 		return diameter;
 	}
+
 
 	/**
 	 * Returns the preferred size of the button.

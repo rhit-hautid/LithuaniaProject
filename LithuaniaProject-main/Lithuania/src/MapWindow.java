@@ -20,16 +20,18 @@ public class MapWindow {
 	// Instantiated components
 	JFrame mapWindow;
 	JPanel mapPanel;
+	JLabel label;
 	CircleButton[] circleButton = new CircleButton[10];
 
-	public MapWindow() {
+	public MapWindow(JLabel updateableLabel) {
+		this.label = updateableLabel;
 
 		JFrame mapWindow = new JFrame("Map Window");
 		JPanel mapPanel = new JPanel();
 		mapPanel.setLayout(null);
 		mapWindow.add(mapPanel);
 
-		int[][] buttonCoordinates = {
+		int[][] buttonCoordinates = { 
 				{ 105, 250 }, // Klaipedos button coordinates
 				{ 185, 180 }, // Telsiai button coordinates
 				{ 215, 315 }, // Taurages button coordinates
@@ -42,13 +44,27 @@ public class MapWindow {
 				{ 305, 475 }, // Marijampoles button coordinates
 		};
 
+		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
+				"Vilniaus", "Alytaus", "Marijampoles" };
+
 		// adds 10 of my circle buttons to the window
 		for (int i = 0; i < 10; i++) {
 			circleButton[i] = new CircleButton(null);
 			circleButton[i].setBounds(buttonCoordinates[i][0], buttonCoordinates[i][1], 20, 20);
 			mapPanel.add(circleButton[i]);
-			System.out.println(circleButton);
 			circleButton[i].repaint();
+			circleButton[i].setName(countryNames[i]);
+			circleButton[i].addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					for(int i = 0; i < countryNames.length; i++) {
+						if (e.getSource().toString().contains(countryNames[i])) {
+							label.setText(" City: " + countryNames[i]);
+						}
+					}
+				}
+			});
 		}
 
 		// add image of map to the panel
@@ -58,12 +74,12 @@ public class MapWindow {
 		jlPic.setBounds(0, 0, size.width, size.height);
 		mapPanel.add(jlPic);
 
-		// set size and visibility of the map window
 		mapWindow.setSize(810, 700);
+		// makes the window a fixed size that the user cannot change
+		mapWindow.setResizable(false);
 		mapPanel.setBackground(Color.WHITE);
 		mapWindow.setVisible(true);
 		mapPanel.setVisible(true);
 
 	}
-
 }

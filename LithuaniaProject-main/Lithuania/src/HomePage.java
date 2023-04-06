@@ -7,12 +7,14 @@ import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
 
 /*
  * @author Isabel Haut
@@ -26,6 +28,7 @@ public class HomePage extends Main {
 
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
+	protected JLabel updatableLabel = new JLabel();
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -43,6 +46,7 @@ public class HomePage extends Main {
 		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
 		dropDownButton.setPreferredSize(new Dimension(400, 70));
+		dropDownButton .setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
 		dropDownButton.setBounds(215 + insets.left, 275 + insets.bottom, sizeTwo.width, sizeTwo.height);
 		dropDownButton.setVisible(true);
@@ -52,19 +56,29 @@ public class HomePage extends Main {
 		String[] choicesTwo = { "Number of People", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
 		final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo);
 		dropDownButtonTwo.setPreferredSize(new Dimension(400, 70));
+		dropDownButtonTwo.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeThree = dropDownButtonTwo.getPreferredSize();
 		dropDownButtonTwo.setBounds(215 + insets.left, 375 + insets.bottom, sizeThree.width, sizeThree.height);
 		dropDownButtonTwo.setVisible(true);
 		panel.add(dropDownButtonTwo);
 
-		// Code for DropDown Button Three
-		String[] choicesThree = { "Location", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
-		final JComboBox<String> dropDownButtonThree = new JComboBox<String>(choicesThree);
-		dropDownButtonThree.setPreferredSize(new Dimension(190, 70));
-		Dimension sizeFour = dropDownButtonThree.getPreferredSize();
-		dropDownButtonThree.setBounds(215 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height);
-		dropDownButtonThree.setVisible(true);
-		panel.add(dropDownButtonThree);
+		// Creates the bounding box for my label
+		Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+		updatableLabel.setBorder(border);
+
+		// changes the color of my bounding box
+		Color myLightBlue = new Color(231, 248, 252);
+
+		// creates the updatableLabel
+		updatableLabel.setPreferredSize(new Dimension(200, 70));
+		Dimension sizeFour = updatableLabel.getPreferredSize();
+		updatableLabel.setText(" None Selected");
+		
+		updatableLabel.setBounds(215 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height);
+		updatableLabel.setFont(new Font("American Typewriter", Font.BOLD, 20));
+		updatableLabel.setVisible(true);
+		panel.add(updatableLabel);
+		updatableLabel.setVisible(true);
 
 		// code for search button
 		searchButton.addActionListener(new ButtonListener1());
@@ -129,8 +143,8 @@ public class HomePage extends Main {
 
 			public void actionPerformed(ActionEvent e) {
 
-				new MapWindow();
-				
+				new MapWindow(updatableLabel);
+
 			}
 		});
 
