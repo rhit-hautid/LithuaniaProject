@@ -62,13 +62,14 @@ public class HomePage extends Main {
 		dropDownButtonTwo.setVisible(true);
 		panel.add(dropDownButtonTwo);
 
+		// Color blue
+		Color myDarkBlue = new Color(122, 138, 153);
+		
 		// Creates the bounding box for my label
-		Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+		Border border = BorderFactory.createLineBorder(myDarkBlue, 1);
 		updatableLabel.setBorder(border);
 
-		// changes the color of my bounding box
-		Color myLightBlue = new Color(231, 248, 252);
-
+		
 		// creates the updatableLabel
 		updatableLabel.setPreferredSize(new Dimension(200, 70));
 		Dimension sizeFour = updatableLabel.getPreferredSize();
