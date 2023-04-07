@@ -20,6 +20,9 @@ import java.awt.event.MouseEvent;
  * mouseMoved.
  */
 
+/*
+ * @author Isabel Haut 
+ */
 public class CircleButton extends JButton {
 
 	private boolean mouseOver = false;
@@ -70,8 +73,8 @@ public class CircleButton extends JButton {
 			}
 		};
 
-		addMouseListener(mouseListener);
-		addMouseMotionListener(mouseListener);
+		this.addMouseListener(mouseListener);
+		this.addMouseMotionListener(mouseListener);
 	}
 
 	/**
@@ -144,7 +147,6 @@ public class CircleButton extends JButton {
 		}
 		
 		g.drawOval(getWidth() / 2 - radius, getHeight() / 2 - radius, diameter, diameter);
-
 		
 		g.setFont(getFont());
 		FontMetrics metrics = g.getFontMetrics(getFont());

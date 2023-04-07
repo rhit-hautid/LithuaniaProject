@@ -2,6 +2,7 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -68,13 +69,18 @@ public class MapWindow {
 		}
 
 		// add image of map to the panel
-		ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
-		JLabel jlPic = new JLabel(mySquare);
+		ImageIcon myMap = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
+		JLabel jlPic = new JLabel(myMap);
 		Dimension size = jlPic.getPreferredSize();
 		jlPic.setBounds(0, 0, size.width, size.height);
 		mapPanel.add(jlPic);
 
 		mapWindow.setSize(810, 700);
+		
+		// moves the mapWindow to appear on the right side of the screen
+		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+		mapWindow.setLocation(dim.width/2-mapWindow.getSize().width/8, dim.height/2-mapWindow.getSize().height/2);
+		
 		// makes the window a fixed size that the user cannot change
 		mapWindow.setResizable(false);
 		mapPanel.setBackground(Color.WHITE);

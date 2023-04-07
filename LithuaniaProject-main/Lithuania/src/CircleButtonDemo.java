@@ -18,15 +18,20 @@ public class CircleButtonDemo {
 	 * @param args An array of command-line arguments for the application. Not used
 	 *             in this implementation.
 	 */
+	
+	/*
+	 * @author Isabel Haut 
+	 */
+	
 	public static void main(String[] args) {
 
 		JFrame frame = new JFrame("Circle Button Demo");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JLabel circleLabel = new JLabel("Exciting circle button:");
+		JLabel myCircleLabel = new JLabel("Exciting circle button:");
 
-		CircleButton circleButton = new CircleButton("Click me!");
-		circleButton.addActionListener(new ActionListener() {
+		CircleButton myCircleButton = new CircleButton("Click me!");
+		myCircleButton.addActionListener(new ActionListener() {
 
 			/**
 			 * The actionPerformed method is called when the CircleButton is clicked. It
@@ -41,8 +46,8 @@ public class CircleButtonDemo {
 		});
 
 		JPanel panel = new JPanel();
-		panel.add(circleLabel);
-		panel.add(circleButton);
+		panel.add(myCircleLabel);
+		panel.add(myCircleButton);
 
 		frame.add(panel);
 

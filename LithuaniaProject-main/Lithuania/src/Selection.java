@@ -28,7 +28,7 @@ public class Selection extends Abstract_DataDisplay{
 			
 	public Selection() {
 		
-		this.frame_Selection = new JFrame("frameSelection");
+		this.frame_Selection = new JFrame("Selection Screen");
 		this.panel_Selection = new JPanel();
 		
 		panel_Selection.setLayout(null);
