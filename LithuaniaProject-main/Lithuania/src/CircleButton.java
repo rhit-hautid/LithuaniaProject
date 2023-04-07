@@ -147,7 +147,6 @@ public class CircleButton extends JButton {
 		}
 		
 		g.drawOval(getWidth() / 2 - radius, getHeight() / 2 - radius, diameter, diameter);
-
 		
 		g.setFont(getFont());
 		FontMetrics metrics = g.getFontMetrics(getFont());
