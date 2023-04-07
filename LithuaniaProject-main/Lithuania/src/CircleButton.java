@@ -73,8 +73,8 @@ public class CircleButton extends JButton {
 			}
 		};
 
-		addMouseListener(mouseListener);
-		addMouseMotionListener(mouseListener);
+		this.addMouseListener(mouseListener);
+		this.addMouseMotionListener(mouseListener);
 	}
 
 	/**
