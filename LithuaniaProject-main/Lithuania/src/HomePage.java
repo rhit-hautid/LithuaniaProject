@@ -20,7 +20,7 @@ import javax.swing.border.Border;
 /*
  * @author Isabel Haut
  */
-
+//juice
 public class HomePage extends Main {
 
 	JFrame frame;
