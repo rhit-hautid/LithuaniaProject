@@ -13,7 +13,7 @@ public class ReadTextAsString {
  
   public static void main(String[] args) throws Exception
   {
-    String data = readFileAsString("C:\\Users\\pankaj\\Desktop\\test.java");
+    String data = readFileAsString("Lithuania/src/TextFiles/Test1.");
     System.out.println(data);
   }
 }
