@@ -64,7 +64,7 @@ public class Selection extends Abstract_DataDisplay{
 		for (int i = 0; i < 6; i++) {	
 			
 		System.out.println("Creating Image Button" + i);
-		List_Button.add(new ImageButton(frame_Selection, panel_Selection,"Lithuania/src/Images/TraikaiCastle.PNG"));
+		List_Button.add(new ImageButton(frame_Selection, panel_Selection,"Lithuania/src/Images/TrakaiCastle.PNG"));
 		
 		}
 	}
@@ -75,6 +75,7 @@ public class Selection extends Abstract_DataDisplay{
 		//If statement for proximaty to current location to determine relevant number of image buttons
 		for (int i = 0; i <List_Button.size(); i++) {
 			Dimension sizeTwo = List_Button.get(i).Button.getPreferredSize();
+			System.out.println(sizeTwo);
 			System.out.println("Placing Image Button " + (i+1));
 			if(i >= 3) {
 				List_Button.get(i).Button.setBounds(100 + (470*(i-3)) + insets.left, 405 + insets.bottom, sizeTwo.width, sizeTwo.height);
