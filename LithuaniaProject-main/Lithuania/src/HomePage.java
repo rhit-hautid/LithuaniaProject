@@ -30,6 +30,8 @@ public class HomePage extends Main {
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
 	protected JLabel updatableLabel = new JLabel();
+	
+	String[] TopPlaces = new String[6];
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -167,7 +169,12 @@ public class HomePage extends Main {
 			if (e.getSource() == searchButton) {
 
 				System.out.println("Test");
-				new Search();
+				try {
+					new Search(TopPlaces);
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
 
 			}
 		}
