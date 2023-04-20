@@ -141,6 +141,10 @@ public class HomePage extends Main {
 		// makes frame visible
 
 		frame.setVisible(true);
+		
+		for(int i=0; i<TopPlaces.length-1;i++) {
+			TopPlaces[i] = "Lithuania/src/TextFiles/Trakai.";
+		}
 
 		// Creates a new window containing a map of Lithuania when click map button
 		mapButton.addActionListener(new ActionListener() {
