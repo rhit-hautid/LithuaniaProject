@@ -44,7 +44,7 @@ public class HomePage extends Main {
 		Insets insets = panel.getInsets();
 
 		// Code for DropDown Button One
-		String[] choices = { "Venue", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
+		String[] choices = { "Venue", "Castles", "Restaurants", "Museams", "Hotels" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
 		dropDownButton.setPreferredSize(new Dimension(400, 70));
 		dropDownButton .setFont(new Font("American Typewriter", Font.BOLD, 20));
@@ -54,7 +54,7 @@ public class HomePage extends Main {
 		panel.add(dropDownButton);
 
 		// Code for DropDown Button Two
-		String[] choicesTwo = { "Number of People", "CHOICE 2", "CHOICE 3", "CHOICE 4", "CHOICE 5", "CHOICE 6" };
+		String[] choicesTwo = { "Number of People", "1", "2", "3", "4", "5+" };
 		final JComboBox<String> dropDownButtonTwo = new JComboBox<String>(choicesTwo);
 		dropDownButtonTwo.setPreferredSize(new Dimension(400, 70));
 		dropDownButtonTwo.setFont(new Font("American Typewriter", Font.BOLD, 20));
@@ -132,7 +132,7 @@ public class HomePage extends Main {
 		panel.add(jlPic2);
 
 		// Color blue
-		Color myBlue = new Color(231, 248, 252);
+		Color myBlue = new Color(245, 224, 143);
 
 		// sets panel to my custom color
 		panel.setBackground(myBlue);

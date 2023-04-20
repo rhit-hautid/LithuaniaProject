@@ -8,7 +8,7 @@ public class DataScreen extends Abstract_DataDisplay {
 	
 	public static final Dimension FIRST_SCREEN_SIZE = new Dimension(1500, 830);
 	
-	Color myBlue = new Color(231, 248, 252); // Color blue
+	Color myBlue = new Color(245, 224, 143);
 	JFrame frame_DataScreen;
 	JPanel panel_DataScreen;
 	

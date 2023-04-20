@@ -22,7 +22,7 @@ public class Selection extends Abstract_DataDisplay{
 	ArrayList<ImageButton> List_Button = new ArrayList<ImageButton>();
 	
 	
-	Color myBlue = new Color(231, 248, 252); // Color blue
+	Color myBlue = new Color(245, 224, 143);
 	JFrame frame_Selection;
 	JPanel panel_Selection;
 			
