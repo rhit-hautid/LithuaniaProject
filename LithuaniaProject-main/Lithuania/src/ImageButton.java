@@ -17,7 +17,7 @@ public class ImageButton {
 	int side_value = 330;
 	
 
-	public ImageButton(JFrame frame_Selection, JPanel panel_Selection, String image ) {
+	public ImageButton(String image) {
 		
 		ImageIcon ii = new ImageIcon(image);
 		Button.setIcon(ii);
