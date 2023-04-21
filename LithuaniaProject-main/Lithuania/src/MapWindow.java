@@ -1,13 +1,12 @@
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -19,9 +18,12 @@ import javax.swing.JPanel;
 public class MapWindow {
 
 	// Instantiated components
+	public HashMap<String, int[]> LocationMap = new HashMap<String, int[]>();
+
 	JFrame mapWindow;
 	JPanel mapPanel;
 	JLabel label;
+
 	CircleButton[] circleButton = new CircleButton[10];
 
 	public MapWindow(JLabel updateableLabel) {
@@ -48,7 +50,12 @@ public class MapWindow {
 		System.out.println("hello" + buttonCoordinates[1][1]);
 		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
-
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println(buttonCoordinates[i][1]);
+			LocationMap.put(countryNames[i], buttonCoordinates[i]);
+		}
+		
 		// adds 10 of my circle buttons to the window
 		for (int i = 0; i < 10; i++) {
 			circleButton[i] = new CircleButton(null);
@@ -88,5 +95,14 @@ public class MapWindow {
 		mapWindow.setVisible(true);
 		mapPanel.setVisible(true);
 
+	}
+	public JLabel getLabel() {
+		return label;
+	}
+	public void setLabel(JLabel label) {
+		this.label = label;
+	}
+	public HashMap<String, int[]> getLocationMap() {
+		return LocationMap;
 	}
 }
