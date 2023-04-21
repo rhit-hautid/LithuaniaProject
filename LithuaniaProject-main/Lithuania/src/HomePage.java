@@ -30,6 +30,8 @@ public class HomePage extends Main {
 	protected JLabel updatableLabel = new JLabel();
 	
 	String[] TopPlaces = new String[6];
+	
+	MapWindow BigMap ;
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -149,7 +151,7 @@ public class HomePage extends Main {
 
 			public void actionPerformed(ActionEvent e) {
 
-				new MapWindow(updatableLabel);
+				BigMap = new MapWindow(updatableLabel);
 
 			}
 		});
@@ -169,8 +171,10 @@ public class HomePage extends Main {
 		public void actionPerformed(ActionEvent e) {
 
 			if (e.getSource() == searchButton) {
-
-				System.out.println("Test");
+				
+				System.out.println(BigMap.getLabel().getText());
+				System.out.println(BigMap.getLocationMap());
+				
 				try {
 					new Search(TopPlaces);
 				} catch (Exception e1) {
