@@ -52,8 +52,11 @@ public class MapWindow {
 				"Vilniaus", "Alytaus", "Marijampoles" };
 		
 		for (int i = 0; i < 10; i++) {
-			System.out.println(buttonCoordinates[i][1]);
-			LocationMap.put(countryNames[i], buttonCoordinates[i]);
+			System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
+			int[] val = {buttonCoordinates[i][0], buttonCoordinates[i][1]};
+			
+			//LocationMap.put(countryNames[i], val);
+			LocationMap.put(countryNames[i], val);
 		}
 		
 		// adds 10 of my circle buttons to the window
