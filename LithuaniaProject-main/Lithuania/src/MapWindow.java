@@ -45,6 +45,7 @@ public class MapWindow {
 				{ 305, 475 }, // Marijampoles button coordinates
 		};
 
+		System.out.println("hello" + buttonCoordinates[1][1]);
 		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
 
