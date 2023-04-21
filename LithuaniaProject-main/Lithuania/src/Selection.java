@@ -54,7 +54,7 @@ public class Selection extends Abstract_DataDisplay {
 		// of image buttons
 		for (int i = 0; i < 6; i++) {
 
-			System.out.println("Gimme Doz Image" + (i + 1));
+			//System.out.println("Gimme Doz Image" + (i + 1));
 
 		}
 	}
@@ -64,7 +64,7 @@ public class Selection extends Abstract_DataDisplay {
 		// of image buttons
 		for (int i = 0; i < 6; i++) {
 
-			System.out.println("Creating Image Button" + i);
+			//System.out.println("Creating Image Button" + i);
 			List_Button.add(new ImageButton("Lithuania/src/Images/TrakaiCastle.PNG"));
 
 		}
@@ -89,8 +89,8 @@ public class Selection extends Abstract_DataDisplay {
 		// of image buttons
 		for (int i = 0; i < List_Button.size(); i++) {
 			Dimension sizeTwo = List_Button.get(i).Button.getPreferredSize();
-			System.out.println(sizeTwo);
-			System.out.println("Placing Image Button " + (i + 1));
+			//System.out.println(sizeTwo);
+			//System.out.println("Placing Image Button " + (i + 1));
 			if (i >= 3) {
 				List_Button.get(i).Button.setBounds(100 + (470 * (i - 3)) + insets.left, 405 + insets.bottom,
 						sizeTwo.width, sizeTwo.height);
@@ -109,7 +109,7 @@ public class Selection extends Abstract_DataDisplay {
 		Insets insets = panel_Selection.getInsets();
 
 		for (int i = 0; i < myLabel.size(); i++) {
-			System.out.println("Creating Label" + i);
+			//System.out.println("Creating Label" + i);
 			myLabel.get(i).setVisible(true);
 
 			myLabel.get(i).setPreferredSize(new Dimension(100, 50));

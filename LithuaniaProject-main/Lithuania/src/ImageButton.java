@@ -19,7 +19,7 @@ public class ImageButton {
 		ImageIcon ii = new ImageIcon(image);
 		Button.setIcon(ii);
 		
-		System.out.println("Test ImageButton");
+		//System.out.println("Test ImageButton");
 		Button.setPreferredSize(new Dimension(side_value, side_value));
 		Button.addActionListener(new ButtonListener2());
 		

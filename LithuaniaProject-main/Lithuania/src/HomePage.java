@@ -171,10 +171,11 @@ public class HomePage extends Main {
 		public void actionPerformed(ActionEvent e) {
 
 			if (e.getSource() == searchButton) {
-				
+				if(BigMap.getLabel() == null) {
+					return;
+				}
 				System.out.println(BigMap.getLabel().getText());
 				System.out.println(BigMap.getLocationMap());
-				
 				try {
 					new Search(TopPlaces);
 				} catch (Exception e1) {

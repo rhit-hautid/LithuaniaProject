@@ -48,7 +48,7 @@ public class MapWindow {
 		};
 		
 
-		System.out.println("hello" + buttonCoordinates[1][1]);
+		//System.out.println("hello" + buttonCoordinates[1][1]);
 		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
 		
@@ -60,8 +60,8 @@ public class MapWindow {
 			new_ArrayList.add(buttonCoordinates[i][1]);
 			
 			
-			System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
-			System.out.println("Array List " + new_ArrayList);
+			//System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
+			//System.out.println("Array List " + new_ArrayList);
 
 			LocationMap.put(countryNames[i], new_ArrayList);
 			
