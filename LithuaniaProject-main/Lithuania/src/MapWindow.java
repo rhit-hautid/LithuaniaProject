@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 public class MapWindow {
 
 	// Instantiated components
-	public HashMap<String, int[]> LocationMap = new HashMap<String, int[]>();
+	public HashMap<String, ArrayList<Integer>> LocationMap = new HashMap<String, ArrayList<Integer>>();
 
 	JFrame mapWindow;
 	JPanel mapPanel;
@@ -46,17 +46,26 @@ public class MapWindow {
 				{ 423, 545 }, // Alytaus button coordinates
 				{ 305, 475 }, // Marijampoles button coordinates
 		};
+		
 
 		System.out.println("hello" + buttonCoordinates[1][1]);
 		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
 		
 		for (int i = 0; i < 10; i++) {
-			System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
-			int[] val = {buttonCoordinates[i][0], buttonCoordinates[i][1]};
 			
-			//LocationMap.put(countryNames[i], val);
-			LocationMap.put(countryNames[i], val);
+			ArrayList<Integer> new_ArrayList = new ArrayList<Integer>();
+			
+			new_ArrayList.add(buttonCoordinates[i][0]);
+			new_ArrayList.add(buttonCoordinates[i][1]);
+			
+			
+			System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
+			System.out.println("Array List " + new_ArrayList);
+
+			LocationMap.put(countryNames[i], new_ArrayList);
+			
+			//new_ArrayList.clear();
 		}
 		
 		// adds 10 of my circle buttons to the window
@@ -105,7 +114,7 @@ public class MapWindow {
 	public void setLabel(JLabel label) {
 		this.label = label;
 	}
-	public HashMap<String, int[]> getLocationMap() {
+	public HashMap<String, ArrayList<Integer>> getLocationMap() {
 		return LocationMap;
 	}
 }
