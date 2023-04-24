@@ -12,6 +12,7 @@ public class DataScreen extends Abstract_DataDisplay {
 	JFrame frame_DataScreen;
 	JPanel panel_DataScreen;
 	
+	// Make a constructor that takes in the JLabel or text (String) of the JLabel that was clicked 
 	
 	public DataScreen() {
 		this.frame_DataScreen = new JFrame("frameDataScreen");

@@ -1,5 +1,4 @@
 
-
 public class DataDisplay {
 	
 	//size of map is (810,700)

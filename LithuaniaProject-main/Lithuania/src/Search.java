@@ -4,43 +4,38 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
+public class Search {
 
-public class Search{
-	
 	public static HashMap<String, ArrayList<String>> CastlesMap = new HashMap<String, ArrayList<String>>();
-	
-	
+
 	public Search(String[] TopPlaces) throws Exception {
-		
-		for(int i=0; i<TopPlaces.length-1;i++) {
-			//readFileAsString("Lithuania/src/TextFiles/Trakai.");
+
+		for (int i = 0; i < TopPlaces.length - 1; i++) {
+			// readFileAsString("Lithuania/src/TextFiles/Trakai.");
 			readFileAsString(TopPlaces[(i)]);
+
 		}
-		
-		System.out.println(CastlesMap);
 		new Selection();
 	}
-	
-	public static void readFileAsString(String fileName)throws Exception {
+
+	public static void readFileAsString(String fileName) throws Exception {
 		ArrayList<String> list = new ArrayList<String>();
-		
+
 		try {
-		Scanner s = new Scanner(new File(fileName));
-		
-	    while (s.hasNextLine()){
-	        try {
-				list.add(s.nextLine());
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			Scanner s = new Scanner(new File(fileName));
+
+			while (s.hasNextLine()) {
+				try {
+					list.add(s.nextLine());
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
 			}
-	    }
-	    
-	    CastlesMap.put("Trakai",list);
-	    s.close();
-	    
+
+			CastlesMap.put("Trakai", list);
+			s.close();
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-	  }
+	}
 }

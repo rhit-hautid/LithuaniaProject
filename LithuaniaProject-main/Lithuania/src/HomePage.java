@@ -27,11 +27,12 @@ public class HomePage extends Main {
 
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
+	private String cityClicked;
 	protected JLabel updatableLabel = new JLabel();
-	
+
 	String[] TopPlaces = new String[6];
-	
-	MapWindow BigMap ;
+
+	MapWindow BigMap;
 
 	public HomePage(JFrame mainFrame, JPanel mainPanel) {
 
@@ -49,7 +50,7 @@ public class HomePage extends Main {
 		String[] choices = { "Venue", "Castles", "Restaurants", "Museams", "Hotels" };
 		final JComboBox<String> dropDownButton = new JComboBox<String>(choices);
 		dropDownButton.setPreferredSize(new Dimension(400, 70));
-		dropDownButton .setFont(new Font("American Typewriter", Font.BOLD, 20));
+		dropDownButton.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		Dimension sizeTwo = dropDownButton.getPreferredSize();
 		dropDownButton.setBounds(215 + insets.left, 275 + insets.bottom, sizeTwo.width, sizeTwo.height);
 		dropDownButton.setVisible(true);
@@ -67,17 +68,16 @@ public class HomePage extends Main {
 
 		// Color blue
 		Color myDarkBlue = new Color(122, 138, 153);
-		
+
 		// Creates the bounding box for my label
 		Border border = BorderFactory.createLineBorder(myDarkBlue, 1);
 		updatableLabel.setBorder(border);
 
-		
 		// creates the updatableLabel
 		updatableLabel.setPreferredSize(new Dimension(200, 70));
 		Dimension sizeFour = updatableLabel.getPreferredSize();
 		updatableLabel.setText(" None Selected");
-		
+
 		updatableLabel.setBounds(215 + insets.left, 475 + insets.bottom, sizeFour.width, sizeFour.height);
 		updatableLabel.setFont(new Font("American Typewriter", Font.BOLD, 20));
 		updatableLabel.setVisible(true);
@@ -141,9 +141,9 @@ public class HomePage extends Main {
 		// makes frame visible
 
 		frame.setVisible(true);
-		
-		for(int i=0; i<TopPlaces.length-1;i++) {
-			TopPlaces[i] = "Lithuania/src/TextFiles/Trakai.";
+
+		for (int i = 0; i < TopPlaces.length - 1; i++) {
+			TopPlaces[i] = "Lithuania/src/TextFiles/Kaunas";
 		}
 
 		// Creates a new window containing a map of Lithuania when click map button
@@ -171,15 +171,17 @@ public class HomePage extends Main {
 		public void actionPerformed(ActionEvent e) {
 
 			if (e.getSource() == searchButton) {
-				if(BigMap.getLabel() == null) {
+
+				cityClicked = updatableLabel.getText();
+
+				System.out.println(cityClicked);
+				if (BigMap.getLabel() == null) {
 					return;
 				}
-				System.out.println(BigMap.getLabel().getText());
-				System.out.println(BigMap.getLocationMap());
+
 				try {
 					new Search(TopPlaces);
 				} catch (Exception e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
 
