@@ -47,11 +47,40 @@ public class MapWindow {
 				{ 305, 475 }, // Marijampoles button coordinates
 		};
 		
-
+		int[][] castleButtonCoordinates = { 
+				{ 75, 220 }, // Klaipeda Castle button coordinates
+				{ 270, 338 }, // Panemune Castle button coordinates
+				{ 299, 338 }, // Raudone Castle button coordinates
+				{ 385, 375 }, // Raundovaris Castle button coordinates
+				{ 430, 435 }, // Kaunas Castle button coordinates
+				{ 498, 103 }, // Birzai Castle button coordinates
+				{ 485, 315 }, // Siesikai Castle button coordinates
+				{ 604, 460 }, // Medininkai Castle button coordinates
+				{ 615, 525 }, // Norviliskes Castle button coordinates
+				{ 515, 455 }, // Trakai Castle button coordinates
+		};
 		//System.out.println("hello" + buttonCoordinates[1][1]);
-		String[] countryNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
+		String[] cityNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
 		
+		
+		String[] castleNames = { "Klaipeda", "Panemune", "Raudone", "Raundovaris", "Kaunas", "Birzai", "Siesikai",
+				"Medininkai", "Norviliskes", "Trakai" };
+		
+	    // Calculate and print the distance between each castle and each city
+	    for (int i = 0; i < buttonCoordinates.length; i++) {
+	        for (int j = 0; j < castleButtonCoordinates.length; j++) {
+	            int x1 = buttonCoordinates[i][0];
+	            int y1 = buttonCoordinates[i][1];
+	            int x2 = castleButtonCoordinates[j][0];
+	            int y2 = castleButtonCoordinates[j][1];
+	            
+	            double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+	            
+	            System.out.println("Distance between " + (cityNames[i]) + " and " + (castleNames[i]) + " is " + distance + " pixels");
+	        }
+	    }
+	
 		for (int i = 0; i < 10; i++) {
 			
 			ArrayList<Integer> new_ArrayList = new ArrayList<Integer>();
@@ -63,7 +92,7 @@ public class MapWindow {
 			//System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
 			//System.out.println("Array List " + new_ArrayList);
 
-			LocationMap.put(countryNames[i], new_ArrayList);
+			LocationMap.put(cityNames[i], new_ArrayList);
 			
 			//new_ArrayList.clear();
 		}
@@ -74,20 +103,60 @@ public class MapWindow {
 			circleButton[i].setBounds(buttonCoordinates[i][0], buttonCoordinates[i][1], 20, 20);
 			mapPanel.add(circleButton[i]);
 			circleButton[i].repaint();
-			circleButton[i].setName(countryNames[i]);
+			circleButton[i].setName(cityNames[i]);
 			circleButton[i].addActionListener(new ActionListener() {
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					for(int i = 0; i < countryNames.length; i++) {
-						if (e.getSource().toString().contains(countryNames[i])) {
-							label.setText(" City: " + countryNames[i]);
+					for(int i = 0; i < cityNames.length; i++) {
+						if (e.getSource().toString().contains(cityNames[i])) {
+							label.setText(" City: " + cityNames[i]);
 						}
 					}
 				}
 			});
 		}
 
+
+		// adds 10 of my circle buttons to the window for the castles
+		for (int i = 0; i < 10; i++) {
+			circleButton[i] = new CircleButton(null);
+			circleButton[i].setBounds(castleButtonCoordinates[i][0], castleButtonCoordinates[i][1], 10, 10);
+			mapPanel.add(circleButton[i]);
+			circleButton[i].repaint();
+			circleButton[i].setName(cityNames[i]);
+			circleButton[i].addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					for(int i = 0; i < cityNames.length; i++) {
+						if (e.getSource().toString().contains(cityNames[i])) {
+							label.setText(" City: " + cityNames[i]);
+						}
+					}
+				}
+			});
+		}
+
+		// adds 10 of my circle buttons to the window
+		for (int i = 0; i < 10; i++) {
+			circleButton[i] = new CircleButton(null);
+			circleButton[i].setBounds(buttonCoordinates[i][0], buttonCoordinates[i][1], 20, 20);
+			mapPanel.add(circleButton[i]);
+			circleButton[i].repaint();
+			circleButton[i].setName(cityNames[i]);
+			circleButton[i].addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					for(int i = 0; i < cityNames.length; i++) {
+						if (e.getSource().toString().contains(cityNames[i])) {
+							label.setText(" City: " + cityNames[i]);
+						}
+					}
+				}
+			});
+		}
 		// add image of map to the panel
 		ImageIcon myMap = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
 		JLabel jlPic = new JLabel(myMap);
