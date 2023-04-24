@@ -34,7 +34,7 @@ public class MapWindow {
 		mapPanel.setLayout(null);
 		mapWindow.add(mapPanel);
 
-		int[][] buttonCoordinates = { 
+		int[][] cityButtonCoordinates = { 
 				{ 105, 250 }, // Klaipedos button coordinates
 				{ 185, 180 }, // Telsiai button coordinates
 				{ 215, 315 }, // Taurages button coordinates
@@ -68,10 +68,10 @@ public class MapWindow {
 				"Medininkai", "Norviliskes", "Trakai" };
 		
 	    // Calculate and print the distance between each castle and each city
-	    for (int i = 0; i < buttonCoordinates.length; i++) {
+	    for (int i = 0; i < cityButtonCoordinates.length; i++) {
 	        for (int j = 0; j < castleButtonCoordinates.length; j++) {
-	            int x1 = buttonCoordinates[i][0];
-	            int y1 = buttonCoordinates[i][1];
+	            int x1 = cityButtonCoordinates[i][0];
+	            int y1 = cityButtonCoordinates[i][1];
 	            int x2 = castleButtonCoordinates[j][0];
 	            int y2 = castleButtonCoordinates[j][1];
 	            
@@ -85,8 +85,8 @@ public class MapWindow {
 			
 			ArrayList<Integer> new_ArrayList = new ArrayList<Integer>();
 			
-			new_ArrayList.add(buttonCoordinates[i][0]);
-			new_ArrayList.add(buttonCoordinates[i][1]);
+			new_ArrayList.add(cityButtonCoordinates[i][0]);
+			new_ArrayList.add(cityButtonCoordinates[i][1]);
 			
 			
 			//System.out.println(buttonCoordinates[i][0] +" "+ buttonCoordinates[i][1]);
@@ -100,7 +100,7 @@ public class MapWindow {
 		// adds 10 of my circle buttons to the window
 		for (int i = 0; i < 10; i++) {
 			circleButton[i] = new CircleButton(null);
-			circleButton[i].setBounds(buttonCoordinates[i][0], buttonCoordinates[i][1], 20, 20);
+			circleButton[i].setBounds(cityButtonCoordinates[i][0], cityButtonCoordinates[i][1], 20, 20);
 			mapPanel.add(circleButton[i]);
 			circleButton[i].repaint();
 			circleButton[i].setName(cityNames[i]);
@@ -118,45 +118,27 @@ public class MapWindow {
 		}
 
 
-		// adds 10 of my circle buttons to the window for the castles
-		for (int i = 0; i < 10; i++) {
-			circleButton[i] = new CircleButton(null);
-			circleButton[i].setBounds(castleButtonCoordinates[i][0], castleButtonCoordinates[i][1], 10, 10);
-			mapPanel.add(circleButton[i]);
-			circleButton[i].repaint();
-			circleButton[i].setName(cityNames[i]);
-			circleButton[i].addActionListener(new ActionListener() {
+//		// adds 10 of my circle buttons to the window for the castles
+//		for (int i = 0; i < 10; i++) {
+//			circleButton[i] = new CircleButton(null);
+//			circleButton[i].setBounds(castleButtonCoordinates[i][0], castleButtonCoordinates[i][1], 10, 10);
+//			mapPanel.add(circleButton[i]);
+//			circleButton[i].repaint();
+//			circleButton[i].setName(cityNames[i]);
+//			circleButton[i].addActionListener(new ActionListener() {
+//
+//				@Override
+//				public void actionPerformed(ActionEvent e) {
+//					for(int i = 0; i < cityNames.length; i++) {
+//						if (e.getSource().toString().contains(cityNames[i])) {
+//							label.setText(" City: " + cityNames[i]);
+//						}
+//					}
+//				}
+//			});
+//		}
 
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					for(int i = 0; i < cityNames.length; i++) {
-						if (e.getSource().toString().contains(cityNames[i])) {
-							label.setText(" City: " + cityNames[i]);
-						}
-					}
-				}
-			});
-		}
 
-		// adds 10 of my circle buttons to the window
-		for (int i = 0; i < 10; i++) {
-			circleButton[i] = new CircleButton(null);
-			circleButton[i].setBounds(buttonCoordinates[i][0], buttonCoordinates[i][1], 20, 20);
-			mapPanel.add(circleButton[i]);
-			circleButton[i].repaint();
-			circleButton[i].setName(cityNames[i]);
-			circleButton[i].addActionListener(new ActionListener() {
-
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					for(int i = 0; i < cityNames.length; i++) {
-						if (e.getSource().toString().contains(cityNames[i])) {
-							label.setText(" City: " + cityNames[i]);
-						}
-					}
-				}
-			});
-		}
 		// add image of map to the panel
 		ImageIcon myMap = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
 		JLabel jlPic = new JLabel(myMap);
