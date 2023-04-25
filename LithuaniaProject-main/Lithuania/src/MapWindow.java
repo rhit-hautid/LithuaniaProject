@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Map.Entry;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -21,7 +22,7 @@ public class MapWindow {
 
 	// Instantiated components
 	public HashMap<String, ArrayList<Integer>> LocationMap = new HashMap<String, ArrayList<Integer>>();
-
+	public ArrayList<String> TopLocations = new ArrayList<String>();
 	JFrame mapWindow;
 	JPanel mapPanel;
 	JLabel label;
@@ -29,6 +30,18 @@ public class MapWindow {
 	String SaveCastleChosen = null;
 
 	CircleButton[] circleButton = new CircleButton[10];
+	
+	public static int[][] castleButtonCoordinates = { { 75, 220 }, // Klaipeda Castle button coordinates
+			{ 270, 338 }, // Panemune Castle button coordinates
+			{ 299, 338 }, // Raudone Castle button coordinates
+			{ 385, 375 }, // Raundovaris Castle button coordinates
+			{ 430, 435 }, // Kaunas Castle button coordinates
+			{ 498, 103 }, // Birzai Castle button coordinates
+			{ 485, 315 }, // Siesikai Castle button coordinates
+			{ 604, 460 }, // Medininkai Castle button coordinates
+			{ 615, 525 }, // Norviliskes Castle button coordinates
+			{ 515, 455 }, // Trakai Castle button coordinates
+	};
 
 	public MapWindow(JLabel updateableLabel) {
 		this.label = updateableLabel;
@@ -50,17 +63,6 @@ public class MapWindow {
 				{ 305, 475 }, // Marijampoles button coordinates
 		};
 
-		int[][] castleButtonCoordinates = { { 75, 220 }, // Klaipeda Castle button coordinates
-				{ 270, 338 }, // Panemune Castle button coordinates
-				{ 299, 338 }, // Raudone Castle button coordinates
-				{ 385, 375 }, // Raundovaris Castle button coordinates
-				{ 430, 435 }, // Kaunas Castle button coordinates
-				{ 498, 103 }, // Birzai Castle button coordinates
-				{ 485, 315 }, // Siesikai Castle button coordinates
-				{ 604, 460 }, // Medininkai Castle button coordinates
-				{ 615, 525 }, // Norviliskes Castle button coordinates
-				{ 515, 455 }, // Trakai Castle button coordinates
-		};
 		// System.out.println("hello" + buttonCoordinates[1][1]);
 		String[] cityNames = { "Klaipedos", "Telsiai", "Taurages", "Saiauliai", "Panevezio", "Kauno", "Utenos",
 				"Vilniaus", "Alytaus", "Marijampoles" };
@@ -160,26 +162,32 @@ public class MapWindow {
 
 	}
 	public ArrayList<String> getDistances(String CityChosen){
-		int[][] castleButtonCoordinates = { { 75, 220 }, // Klaipeda Castle button coordinates
-				{ 270, 338 }, // Panemune Castle button coordinates
-				{ 299, 338 }, // Raudone Castle button coordinates
-				{ 385, 375 }, // Raundovaris Castle button coordinates
-				{ 430, 435 }, // Kaunas Castle button coordinates
-				{ 498, 103 }, // Birzai Castle button coordinates
-				{ 485, 315 }, // Siesikai Castle button coordinates
-				{ 604, 460 }, // Medininkai Castle button coordinates
-				{ 615, 525 }, // Norviliskes Castle button coordinates
-				{ 515, 455 }, // Trakai Castle button coordinates
-		};
 		//Number of things being sorted
 		int n = 10;
 		//Point you want the distance from
 		int[] p = { LocationMap.get(CityChosen).get(0), LocationMap.get(CityChosen).get(1) };
 		System.out.println("Location of the Chosen City: " + CityChosen + " "+ LocationMap.get(CityChosen));
 		
-		sortArr(castleButtonCoordinates, n, p);
+		ArrayList<ArrayList<Integer>> Sorted = sortArr(castleButtonCoordinates, n, p);
+		
+		System.out.println("Location Map Values: " + LocationMap.values());
+		System.out.println("Location Map Key Size: " + LocationMap.keySet().size());
+		
+		//System.out.println("ArrayList: " + LocationMap.keySet().size());
+		
+		
+		
+		ArrayList<Integer> value = null;
 
-		return null;
+		for(Entry<String, ArrayList<Integer>> entry: LocationMap.entrySet()) {
+			if(entry.getValue() == value) {
+		        System.out.println("The key for value " + value + " is " + entry.getKey());
+		        break;
+		      }
+		}
+
+		
+		return TopLocations;
 
 	}
 	public void setSaveCastleChosen(String saveCastleChosen) {
@@ -200,7 +208,7 @@ public class MapWindow {
 	public HashMap<String, ArrayList<Integer>> getLocationMap() {
 		return LocationMap;
 	}
-	static void sortArr(int[][] arr, int n, int[] p)
+	static ArrayList<ArrayList<Integer>> sortArr(int[][] arr, int n, int[] p)
 	  {
 	 
 	    // List to store the distance
@@ -233,8 +241,8 @@ public class MapWindow {
 	
 	    // Output
 	    for (int i = 0; i < n; i++) {
-	      System.out.println("(" + vp.get(i).get(1) + ", "
-	                       + vp.get(i).get(2) +") ");
+	      System.out.println("(" + vp.get(i).get(1) + ", "+ vp.get(i).get(2) +") ");
 	    }
+	    return vp;
 	  }
 }
