@@ -4,6 +4,8 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 
 import javax.swing.ImageIcon;
@@ -158,10 +160,27 @@ public class MapWindow {
 
 	}
 	public ArrayList<String> getDistances(String CityChosen){
+		int[][] castleButtonCoordinates = { { 75, 220 }, // Klaipeda Castle button coordinates
+				{ 270, 338 }, // Panemune Castle button coordinates
+				{ 299, 338 }, // Raudone Castle button coordinates
+				{ 385, 375 }, // Raundovaris Castle button coordinates
+				{ 430, 435 }, // Kaunas Castle button coordinates
+				{ 498, 103 }, // Birzai Castle button coordinates
+				{ 485, 315 }, // Siesikai Castle button coordinates
+				{ 604, 460 }, // Medininkai Castle button coordinates
+				{ 615, 525 }, // Norviliskes Castle button coordinates
+				{ 515, 455 }, // Trakai Castle button coordinates
+		};
+		//Number of things being sorted
+		int n = 10;
+		//Point you want the distance from
+		int[] p = { LocationMap.get(CityChosen).get(0), LocationMap.get(CityChosen).get(1) };
+		System.out.println("Location of the Chosen City: " + CityChosen + " "+ LocationMap.get(CityChosen));
 		
-		
+		sortArr(castleButtonCoordinates, n, p);
+
 		return null;
-		
+
 	}
 	public void setSaveCastleChosen(String saveCastleChosen) {
 		SaveCastleChosen = saveCastleChosen;
@@ -181,4 +200,41 @@ public class MapWindow {
 	public HashMap<String, ArrayList<Integer>> getLocationMap() {
 		return LocationMap;
 	}
+	static void sortArr(int[][] arr, int n, int[] p)
+	  {
+	 
+	    // List to store the distance
+	    // with respective elements
+	 
+	    ArrayList<ArrayList<Integer>> vp = new ArrayList<ArrayList<Integer>>();
+	    // Storing the distance with its
+	    // distance in the List array
+	    for (int i = 0; i < n; i++) {
+	 
+	      int dist = (int)Math.pow((p[0] - arr[i][0]), 2)
+	        + (int)Math.pow((p[1] - arr[i][1]), 2);
+	      ArrayList<Integer> l1 = new ArrayList<Integer> ();
+	      l1.add(dist);
+	      l1.add(arr[i][0]);
+	      l1.add(arr[i][1]);
+	 
+	      vp.add(l1);
+	    }
+	 
+	    // Sorting the array with
+	    // respect to its distance
+	 
+	    Collections.sort(vp, new Comparator<ArrayList<Integer>> () {
+	      @Override
+	      public int compare(ArrayList<Integer> a, ArrayList<Integer> b) {
+	        return a.get(0).compareTo(b.get(0));
+	      }
+	    });
+	
+	    // Output
+	    for (int i = 0; i < n; i++) {
+	      System.out.println("(" + vp.get(i).get(1) + ", "
+	                       + vp.get(i).get(2) +") ");
+	    }
+	  }
 }
