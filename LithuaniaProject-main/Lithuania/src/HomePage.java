@@ -12,6 +12,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
@@ -142,10 +143,11 @@ public class HomePage extends Main {
 
 		frame.setVisible(true);
 
-		for (int i = 0; i < TopPlaces.length - 1; i++) {
+		for (int i = 0; i < 6; i++) {
 			TopPlaces[i] = "Lithuania/src/TextFiles/Kaunas";
+			//System.out.println(TopPlaces[i]);
 		}
-
+		
 		// Creates a new window containing a map of Lithuania when click map button
 		mapButton.addActionListener(new ActionListener() {
 
@@ -171,17 +173,22 @@ public class HomePage extends Main {
 		public void actionPerformed(ActionEvent e) {
 
 			if (e.getSource() == searchButton) {
-
-				cityClicked = updatableLabel.getText();
-				System.out.println(cityClicked);
-				if (BigMap.getLabel() == null) {
-					return;
-				}
-
-				try {
-					new Search(TopPlaces);
-				} catch (Exception e1) {
-					e1.printStackTrace();
+				
+				if(BigMap != null && BigMap.getSaveCastleChosen() != null) {
+					cityClicked = BigMap.getSaveCastleChosen();
+					BigMap.getDistances(BigMap.getSaveCastleChosen());
+					
+					System.out.println(cityClicked);
+				
+					try {
+						new Search(TopPlaces);
+					} catch (Exception e1) {
+						e1.printStackTrace();
+					}
+					
+				} else {
+					JOptionPane.showMessageDialog(frame, "Please Select Your Location!",
+				               "No Location Selected", JOptionPane.ERROR_MESSAGE);
 				}
 
 			}

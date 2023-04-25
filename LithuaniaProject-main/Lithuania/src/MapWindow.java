@@ -23,6 +23,8 @@ public class MapWindow {
 	JFrame mapWindow;
 	JPanel mapPanel;
 	JLabel label;
+	
+	String SaveCastleChosen = null;
 
 	CircleButton[] circleButton = new CircleButton[10];
 
@@ -105,6 +107,7 @@ public class MapWindow {
 				public void actionPerformed(ActionEvent e) {
 					for (int i = 0; i < cityNames.length; i++) {
 						if (e.getSource().toString().contains(cityNames[i])) {
+							setSaveCastleChosen(cityNames[i]);
 							label.setText(" City: " + cityNames[i]);
 						}
 					}
@@ -119,17 +122,17 @@ public class MapWindow {
 			mapPanel.add(circleButton[i]);
 			circleButton[i].repaint();
 			circleButton[i].setName(cityNames[i]);
-			circleButton[i].addActionListener(new ActionListener() {
+			//circleButton[i].addActionListener(new ActionListener() {
 
-				@Override
-				public void actionPerformed(ActionEvent e) {
-					for (int i = 0; i < cityNames.length; i++) {
-						if (e.getSource().toString().contains(cityNames[i])) {
-							label.setText(" City: " + cityNames[i]);
-						}
-					}
-				}
-			});
+//				@Override
+//				public void actionPerformed(ActionEvent e) {
+//					for (int i = 0; i < cityNames.length; i++) {
+//						if (e.getSource().toString().contains(cityNames[i])) {
+//							label.setText(" City: " + cityNames[i]);
+//						}
+//					}
+//				}
+//			});
 		}
 
 //	
@@ -159,6 +162,12 @@ public class MapWindow {
 		
 		return null;
 		
+	}
+	public void setSaveCastleChosen(String saveCastleChosen) {
+		SaveCastleChosen = saveCastleChosen;
+	}
+	public String getSaveCastleChosen() {
+		return SaveCastleChosen;
 	}
 
 	public JLabel getLabel() {
