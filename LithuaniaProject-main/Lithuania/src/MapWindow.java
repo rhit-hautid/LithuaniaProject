@@ -76,7 +76,7 @@ public class MapWindow {
 //	            System.out.println("Distance between " + (cityNames[i]) + " and " + (castleNames[i]) + " is " + distance + " pixels");
 			}
 		}
-
+		
 		for (int i = 0; i < 10; i++) {
 
 			ArrayList<Integer> new_ArrayList = new ArrayList<Integer>();
@@ -134,7 +134,7 @@ public class MapWindow {
 
 //	
 		// add image of map to the panel
-		ImageIcon myMap = new ImageIcon("Lithuania/src/Images/LithuanianMap.PNG");
+		ImageIcon myMap = new ImageIcon("Lithuania/src/HomePageImages/LithuanianMap.PNG");
 		JLabel jlPic = new JLabel(myMap);
 		Dimension size = jlPic.getPreferredSize();
 		jlPic.setBounds(0, 0, size.width, size.height);
@@ -153,6 +153,12 @@ public class MapWindow {
 		mapWindow.setVisible(true);
 		mapPanel.setVisible(true);
 
+	}
+	public ArrayList<String> getDistances(String CityChosen){
+		
+		
+		return null;
+		
 	}
 
 	public JLabel getLabel() {

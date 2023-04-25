@@ -120,14 +120,14 @@ public class HomePage extends Main {
 		labelTwo.setBounds(210 + insets.left, 160 + insets.bottom, sizeEight.width, sizeEight.height);
 
 		// code to put white square image on the window
-		ImageIcon mySquare = new ImageIcon("Lithuania/src/Images/MySquare.PNG");
+		ImageIcon mySquare = new ImageIcon("Lithuania/src/HomePageImages/MySquare.PNG");
 		JLabel jlPic = new JLabel(mySquare);
 		Dimension size = jlPic.getPreferredSize();
 		jlPic.setBounds(155 + insets.left, 125 + insets.bottom, size.width, size.height);
 		panel.add(jlPic);
 
 		// code to put castle image on the window
-		ImageIcon CastleHome = new ImageIcon("Lithuania/src/Images/CastleHomePage.PNG");
+		ImageIcon CastleHome = new ImageIcon("Lithuania/src/HomePageImages/CastleHomePage.PNG");
 		JLabel jlPic2 = new JLabel(CastleHome);
 		Dimension sizeSix = jlPic2.getPreferredSize();
 		jlPic2.setBounds(280 + insets.left, -33 + insets.bottom, sizeSix.width, 200 + sizeSix.height);
@@ -173,7 +173,6 @@ public class HomePage extends Main {
 			if (e.getSource() == searchButton) {
 
 				cityClicked = updatableLabel.getText();
-
 				System.out.println(cityClicked);
 				if (BigMap.getLabel() == null) {
 					return;
