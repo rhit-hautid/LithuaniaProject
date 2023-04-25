@@ -65,7 +65,7 @@ public class Selection extends Abstract_DataDisplay {
 		for (int i = 0; i < 6; i++) {
 
 			//System.out.println("Creating Image Button" + i);
-			List_Button.add(new ImageButton("Lithuania/src/Images/TrakaiCastle.PNG"));
+			List_Button.add(new ImageButton("Lithuania/src/CastleImages/TrakaiCastle.PNG"));
 
 		}
 	}
