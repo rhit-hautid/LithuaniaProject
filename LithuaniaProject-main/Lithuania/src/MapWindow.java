@@ -170,8 +170,18 @@ public class MapWindow {
 		
 		ArrayList<ArrayList<Integer>> Sorted = sortArr(castleButtonCoordinates, n, p);
 		
-		System.out.println("Location Map Values: " + LocationMap.values());
-		System.out.println("Location Map Key Size: " + LocationMap.keySet().size());
+		//System.out.println("Location Map Values: " + LocationMap.values());
+		//System.out.println("Location Map Key Size: " + LocationMap.keySet().size());
+//		
+		System.out.println(Sorted);
+		
+		//System.out.println(Sorted.get(1));
+	
+		System.out.println(TopLocations);
+		
+//		for(int i = 0; i<6; i++) {
+//			TopLocations.add(Sorted.get(i));
+//		}
 		
 		//System.out.println("ArrayList: " + LocationMap.keySet().size());
 		
