@@ -3,6 +3,8 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -18,7 +20,7 @@ import javax.swing.JPanel;
  * @author Isabel Haut
  */
 
-public class MapWindow {
+public class MapWindow extends JFrame {
 
 	// Instantiated components
 	public HashMap<String, ArrayList<Integer>> LocationMap = new HashMap<String, ArrayList<Integer>>();
@@ -44,6 +46,8 @@ public class MapWindow {
 	};
 
 	public MapWindow(JLabel updateableLabel) {
+
+		    
 		this.label = updateableLabel;
 
 		JFrame mapWindow = new JFrame("Map Window");
@@ -139,6 +143,7 @@ public class MapWindow {
 //			});
 		}
 
+		
 //	
 		// add image of map to the panel
 		ImageIcon myMap = new ImageIcon("Lithuania/src/HomePageImages/LithuanianMap.PNG");
@@ -161,6 +166,8 @@ public class MapWindow {
 		mapPanel.setVisible(true);
 
 	}
+	
+	
 	public ArrayList<String> getDistances(String CityChosen){
 		//Number of things being sorted
 		int n = 10;
