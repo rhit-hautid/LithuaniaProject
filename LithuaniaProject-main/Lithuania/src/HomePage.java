@@ -28,6 +28,7 @@ public class HomePage extends Main {
 
 	JButton searchButton = new JButton("Search");
 	JButton mapButton = new JButton("Map");
+	
 	private String cityClicked;
 	protected JLabel updatableLabel = new JLabel();
 
@@ -131,14 +132,14 @@ public class HomePage extends Main {
 		ImageIcon CastleHome = new ImageIcon("Lithuania/src/HomePageImages/CastleHomePage.PNG");
 		JLabel jlPic2 = new JLabel(CastleHome);
 		Dimension sizeSix = jlPic2.getPreferredSize();
-		jlPic2.setBounds(280 + insets.left, -33 + insets.bottom, sizeSix.width, 200 + sizeSix.height);
+		jlPic2.setBounds(280 + insets.left, -15 + insets.bottom, sizeSix.width, 200 + sizeSix.height);
 		panel.add(jlPic2);
 
 		// Color blue
-		Color myBlue = new Color(245, 224, 143);
+		Color myYellow = new Color(245, 185, 19);
 
 		// sets panel to my custom color
-		panel.setBackground(myBlue);
+		panel.setBackground(myYellow);
 		// makes frame visible
 
 		frame.setVisible(true);
